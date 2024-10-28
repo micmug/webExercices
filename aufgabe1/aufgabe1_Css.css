@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #aa1717;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.burgerMenu {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  cursor: pointer;
+  order: 1;
+}
+
+.label {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  order: 2;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  order: 3;
+}
+
+.hr {
+  background-color: darkgoldenrod;
+  height: 3px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "imageBig imageBig"
+    "imageBig imageBig"
+    "imageSmall imageSmall"
+    "text text"
+    "sideText text sideText";
+  grid-gap: 10px;
+}
+
+.imageBig {
+  border: 1px solid #000000;
+  grid-column: span 2;
+}
+
+.imageSmall {
+  border: 1px solid #000000;
+  grid-column: span 2;
+}
+
+.text {
+  border: 1px solid #000000;
+  grid-column: span 2;
+}
+
+.sideText {
+  border: 1px solid #000000;
+}
