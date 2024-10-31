@@ -2,13 +2,20 @@
   margin: 0;
   padding: 0;
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
 
 /*---------------------------------------- navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #aa1717;
+  background-color: #c94040;
   height: 30px;
   padding: 0 0;
 }
@@ -39,37 +46,74 @@
 
 /*----------------------------     horizontal line   */
 .hr {
-  background-color: darkgoldenrod;
-  height: 3px;
+  background-color: rgb(236, 173, 15);
+  height: 2px;
   border: none;
 }
 
 /*---------------------------------   wrapper */
 .wrapper {
   margin: 0 auto;
-  padding: 15px;
+  padding: 30px;
 }
 
-/*---------------------------------   gird container */
+/*----------------------------     fonts   */
+.quarter1,
+.quarter2,
+.quarter3,
+.quarter4,
+.quarter5,
+.quarter6,
+.quarter7,
+.quarter8,
+.textHalf1,
+.textHalf2 {
+  font-family: "montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+.quarter4,
+.quarter5,
+.textHalf1,
+.textHalf2 {
+  padding: 5px 5px;
+}
+
+/*---------------------------------   GRID CONTAINER */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(9, 1fr);
+  aspect-ratio: 4 / 9;
   gap: 10px;
+  */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  aspect-ratio: 4 / 8;
+  width: 100%;
+  gap: 2%;
 }
 
 .grid-item {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   display: flex;
   aspect-ratio: 1/1;
-  border: #aa1717 1px solid;
+  object-fit: cover;
 }
 
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /*object-position: center;*/
+}
+
+/*-----------------------------full Container1 */
 .item1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 }
 
+/*-----------------------------quarter Container1 */
 .item2 {
   grid-column: 3 / span 2;
   grid-row: 1 / span 2;
@@ -79,6 +123,57 @@
   width: 100%;
 }
 
+.quarter1,
+.quarter2,
+.quarter3,
+.quarter4,
+.quarter5,
+.quarter6,
+.quarter7,
+.quarter8 {
+  display: flex;
+}
+
+.quarter1 {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  overflow: visible;
+  padding-top: 5px;
+}
+.quarter1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8.2%;
+  width: 58.2%;
+  height: 1px;
+  background-color: rgb(236, 173, 15);
+}
+
+.quarter2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.quarter3 {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+}
+
+.quarter4 {
+  grid-column: 2;
+  grid-row: 2;
+  position: relative;
+  border-top: 1px solid rgb(236, 173, 15);
+  width: 50%;
+}
+
+/*-----------------------------quarter Container2 */
 .item3 {
   grid-column: 1 / span 2;
   grid-row: 3 / span 2;
@@ -88,123 +183,202 @@
   width: 100%;
 }
 
-.item4 {
-  grid-column: 3 / span 2;
-  grid-row: 3 / span 2;
-}
-
-.grid-itemHalf1 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 1 / span 2;
-  grid-row: 5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-}
-
-.grid-itemHalf2 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 3 / span 2;
-  grid-row: 5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-}
-.item7 {
-  grid-column: 1 / span 2;
-  grid-row: 6 / span 2;
-}
-
-.item8 {
-  grid-column: 3 / span 2;
-  grid-row: 6 / span 2;
-}
-
-.grid-sideText1 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 1;
-  grid-row: 8 / span 2;
-}
-
-.item10 {
-  grid-column: 2 / span 2;
-  grid-row: 8 / span 2;
-}
-
-.grid-sideText2 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 4;
-  grid-row: 8 / span 2;
-}
-/*-----------------------------quarterContainer */
-
-.quarter1 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.quarter2 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.quarter3 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.quarter4 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
-  grid-column: 2;
-  grid-row: 2;
-}
-
 .quarter5 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
   grid-column: 1;
   grid-row: 1;
+  position: relative;
+  overflow: visible;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.quarter5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 1px;
+  background-color: rgb(236, 173, 15);
 }
 
 .quarter6 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
   grid-column: 2;
   grid-row: 1;
 }
 
 .quarter7 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
   grid-column: 1;
   grid-row: 2;
 }
 
 .quarter8 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
   grid-column: 2;
   grid-row: 2;
+  position: relative;
+  overflow: visible;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 15px;
 }
 
-/*-----------------------------halfContainer */
+.quarter8::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -8.2%;
+  width: 58.2%;
+  height: 1px;
+  background-color: rgb(236, 173, 15);
+}
+
+/*-----------------------------full Container1 */
+.item4 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+}
+
+/*-----------------------------halfContainer1 */
+.grid-itemHalf1 {
+  grid-column: 1 / span 2;
+  grid-row: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
 .textHalf1 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
+  display: flex;
+  justify-content: flex-end; /* Richtet den Inhalt rechts aus */
+  align-items: flex-start; /* Richtet den Inhalt oben aus */
+  position: relative;
+  width: 100%; /* Nutzt die volle Breite des Containers */
+}
+
+.textHalf1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 1px;
+  background-color: rgb(236, 173, 15);
 }
 
 .imageHalf1 {
-  background-color: #f0f0f0;
-  border: #aa1717 1px solid;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.imageHalf1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------halfContainer2 */
+.grid-itemHalf2 {
+  grid-column: 3 / span 2;
+  grid-row: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
+.textHalf2 {
+  position: relative;
+  border-top: 1px solid rgb(236, 173, 15);
+  width: 50%;
+}
+
+.imageHalf2 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.imageHalf2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------quote Container */
+.item7 {
+  grid-column: 1 / span 2;
+  grid-row: 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
+.item8 {
+  grid-column: 3 / span 2;
+  grid-row: 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
+blockquote {
+  width: auto;
+  margin-top: 5rem;
+  font-family: "montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '"';
+}
+
+.author {
+  font-style: normal;
+  font-weight: bold;
+  align-text: left;
+  margin-top: 5px;
+  font-size: 0.6rem;
+}
+
+/*-----------------------------sideText Container */
+.uppercaseBold {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "montserrat", sans-serif;
+  font-size: 0.6rem;
+  line-height: 2;
+}
+.connectionText {
+  font-family: "montserrat", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5;
+}
+.text {
+  font-family: "montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.grid-sideText1 {
+  grid-column: 1;
+  grid-row: 7 / span 2;
+}
+
+/*-----------------------------text Container */
+.item10 {
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 2;
+  flex-direction: column;
+}
+
+/*-----------------------------sideText Container2 */
+.grid-sideText2 {
+  grid-column: 4;
+  grid-row: 7 / span 2;
 }
