@@ -4,22 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="aufgabe1_Css.css" />
+    <script src="aufgabe1_JavaScript.js" defer></script>
     <title>aufgabe1</title>
   </head>
   <body>
     <nav class="navbar">
+      <!-- -->
       <div class="burgerMenu">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul class="label">
-        <li><span class="label-text">Suspendisse Iaculis</span></li>
+      <ul class="dropdown-content" id="dropdown-burger">
+        <li><a href="#">Nullam in dapibus</a></li>
+        <li><a href="#">Fusce vehicula ero</a></li>
+        <li><a href="#">Fusce at dignissim</a></li>
       </ul>
+      <!-- -->
+      <ul class="label">
+        <li>
+          <span class="label-text" id="tooltipText" onclick="openDialog()"
+            >Suspendisse Iaculis</span
+        </li>
+      </ul>
+      <!-- -->
       <div class="logo"><img src="images/cat.png" alt="X" /></div>
     </nav>
 
     <hr class="hr" />
+
     <div class="wrapper">
       <main class="main">
         <div class="grid-container">
@@ -127,5 +140,13 @@
         </div>
       </main>
     </div>
+    <!-- ------------------label dialog image -->
+    <div id="dialog" class="dialog">
+      <div class="dialog-content">
+        <h2>Curabitur ultrices libero ut nunc</h2>
+        <!-- <span class="close" onclick="closeDialog()">&times;</span> -->
+        <img src="images/wueste16.jpg" alt="kein Bild vorhanden" />
+        <p>Pellentesque vel lectus vehicula, condimentum.</p>
+      </div>
   </body>
 </html>
