@@ -1,9 +1,7 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -15,17 +13,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #c94040;
-  height: 30px;
+  background-color: #ffffff;
+  height: 35px;
   padding: 0 0;
 }
 
 .burgerMenu {
   width: 30px;
   height: 30px;
-  background-color: #ccc;
+  background-color: #ffffff;
   cursor: pointer;
   order: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.burgerMenu span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.burgerMenu:hover span {
+  background-color: rgb(236, 173, 15);
 }
 
 .label {
@@ -35,13 +50,34 @@ body {
   padding: 0;
   list-style-type: none;
   order: 2;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+.label-text {
+  transition: all 0.3s ease;
+}
+
+.label-text:hover {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(38%) saturate(1103%)
+    hue-rotate(359deg) brightness(105%) contrast(104%);
 }
 
 .logo {
   width: 30px;
   height: 30px;
-  background-color: #ccc;
+  background-color: #ffffff;
   order: 3;
+  margin-right: 8px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.logo:hover img {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(38%) saturate(1103%)
+    hue-rotate(359deg) brightness(105%) contrast(104%);
 }
 
 /*----------------------------     horizontal line   */
@@ -219,13 +255,13 @@ body {
   overflow: visible;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 15px;
+  padding-top: 30px;
 }
 
 .quarter8::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 10%;
   right: -8.2%;
   width: 58.2%;
   height: 1px;
@@ -327,7 +363,7 @@ body {
 
 blockquote {
   width: auto;
-  margin-top: 5rem;
+  margin-top: 28%;
   font-family: "montserrat", sans-serif;
   font-size: 0.7rem;
   font-style: italic;
@@ -341,7 +377,7 @@ blockquote::after {
 .author {
   font-style: normal;
   font-weight: bold;
-  align-text: left;
+
   margin-top: 5px;
   font-size: 0.6rem;
 }
@@ -353,6 +389,7 @@ blockquote::after {
   font-family: "montserrat", sans-serif;
   font-size: 0.6rem;
   line-height: 2;
+  margin-bottom: 1.5%;
 }
 .connectionText {
   font-family: "montserrat", sans-serif;
@@ -362,7 +399,7 @@ blockquote::after {
 .text {
   font-family: "montserrat", sans-serif;
   font-size: 1rem;
-  margin: 5px 0;
+  margin-bottom: 3%;
 }
 
 .grid-sideText1 {
