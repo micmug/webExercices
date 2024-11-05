@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
 }
-
+:root {
+  --grid-spacing: 0.5rem;
+}
 body {
   background-color: #ffffff;
 }
@@ -121,7 +123,7 @@ a {
   font-size: 14px;
   white-space: nowrap;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 1.5s;
   z-index: 1;
   text-transform: uppercase;
   font-weight: bold;
@@ -200,200 +202,92 @@ a {
 }
 
 /*----------------------------     gridlayout-fonts   */
-.quarter1,
-.quarter2,
-.quarter3,
-.quarter4,
-.quarter5,
-.quarter6,
-.quarter7,
-.quarter8,
-.textHalf1,
-.textHalf2 {
-  font-family: "montserrat", sans-serif;
-  font-size: 0.8rem;
-}
-.quarter4,
-.quarter5,
-.textHalf1,
-.textHalf2 {
-  padding: 5px 5px;
-}
 
-/*---------------------------------   GRID CONTAINER */
+/* Basis-Layout für Desktop */
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(8, minmax(0, 1fr));
-  aspect-ratio: 4 / 8;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   width: 100%;
-  gap: 2%;
 }
 
 .grid-item {
   background-color: #ffffff;
   display: flex;
-  aspect-ratio: 1/1;
   object-fit: cover;
+  font-family: "montserrat", sans-serif;
+  font-size: 0.8rem;
 }
 
 .grid-item img {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /*object-position: center;*/
+  aspect-ratio: 1 / 1;
 }
 
-/*-----------------------------full Container1 */
-.item1 {
+/*---------------------------------------  ROW 1 IMAGES   */
+.item1-4x4-img1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+  margin-right: var(--grid-spacing);
+  margin-bottom: var(--grid-spacing);
 }
 
-/*-----------------------------quarter Container1 */
-.item2 {
+.item2-2x1-txt1 {
   grid-column: 3 / span 2;
-  grid-row: 1 / span 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
-}
-
-.quarter1,
-.quarter2,
-.quarter3,
-.quarter4,
-.quarter5,
-.quarter6,
-.quarter7,
-.quarter8 {
-  display: flex;
-}
-
-.quarter1 {
-  grid-column: 1;
   grid-row: 1;
+  margin-left: var(--grid-spacing);
+
   position: relative;
-  overflow: visible;
   padding-top: 5px;
 }
-.quarter1::before {
+
+.item2-2x1-txt1::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -8.2%;
-  width: 58.2%;
+  left: -1rem;
+  width: 25%;
   height: 1px;
   background-color: rgb(236, 173, 15);
 }
 
-.quarter2 {
-  grid-column: 2;
-  grid-row: 1;
+.item3-1x1-img2 {
+  grid-column: 3;
+  grid-row: 2;
+  margin-left: var(--grid-spacing);
+  margin-bottom: var(--grid-spacing);
 }
 
-.quarter3 {
-  grid-column: 1;
+.item4-1x1-txt2 {
+  grid-column: 4;
   grid-row: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom center;
-}
+  margin-bottom: var(--grid-spacing);
 
-.quarter4 {
-  grid-column: 2;
-  grid-row: 2;
-  position: relative;
   border-top: 1px solid rgb(236, 173, 15);
   width: 50%;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-/*-----------------------------quarter Container2 */
-.item3 {
-  grid-column: 1 / span 2;
-  grid-row: 3 / span 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
-}
-
-.quarter5 {
+/*---------------------------------------  ROW 2 IMAGES   */
+.item5-1x1-txt3 {
   grid-column: 1;
-  grid-row: 1;
-  position: relative;
-  overflow: visible;
-  justify-content: flex-end;
-  position: relative;
-}
+  grid-row: 3;
+  margin-top: var(--grid-spacing);
 
-.quarter5::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 1px;
-  background-color: rgb(236, 173, 15);
-}
-
-.quarter6 {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.quarter7 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.quarter8 {
-  grid-column: 2;
-  grid-row: 2;
-  position: relative;
-  overflow: visible;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-top: calc(2% * 4 + 5px);
-}
-
-.quarter8::before {
-  content: "";
-  position: absolute;
-  top: calc(2% * 4);
-  right: -8.2%;
-  width: 58.2%;
-  height: 1px;
-  background-color: rgb(236, 173, 15);
-}
-
-/*-----------------------------full Container1 */
-.item4 {
-  grid-column: 3 / span 2;
-  grid-row: 3 / span 2;
-}
-
-/*-----------------------------halfContainer1 */
-.grid-itemHalf1 {
-  grid-column: 1 / span 2;
-  grid-row: 5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  aspect-ratio: 2 / 1;
-}
-
-.textHalf1 {
   display: flex;
-  justify-content: flex-end; /* Richtet den Inhalt rechts aus */
-  align-items: flex-start; /* Richtet den Inhalt oben aus */
+  justify-content: flex-end;
+  align-items: flex-start;
   position: relative;
-  width: 100%; /* Nutzt die volle Breite des Containers */
+
+  padding-top: 5px;
+  padding-right: 5px;
 }
 
-.textHalf1::before {
+.item5-1x1-txt3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -403,65 +297,123 @@ a {
   background-color: rgb(236, 173, 15);
 }
 
-.imageHalf1 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+.item6-1x1-img3 {
+  grid-column: 2;
+  grid-row: 3;
+  margin-right: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
 }
 
-.imageHalf1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.item7-2x1-txt4 {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  margin-bottom: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+  margin-right: var(--grid-spacing);
 
-/*-----------------------------halfContainer2 */
-.grid-itemHalf2 {
-  grid-column: 3 / span 2;
-  grid-row: 5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  aspect-ratio: 2 / 1;
-}
-
-.textHalf2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
   position: relative;
+
+  padding-top: 5px;
+}
+
+.item7-2x1-txt4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 1px;
+  background-color: rgb(236, 173, 15);
+}
+
+.item8-4x4-img4 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+  margin-bottom: var(--grid-spacing);
+  margin-left: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+}
+
+/*---------------------------------------  ROW 3 IMAGES   */
+.item9-1x1-txt5 {
+  grid-column: 1;
+  grid-row: 5;
+  margin-bottom: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.item9-1x1-txt5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 1px;
+  background-color: rgb(236, 173, 15);
+}
+
+.item10-1x1-img5 {
+  grid-column: 2;
+  grid-row: 5;
+  margin-bottom: var(--grid-spacing);
+  margin-right: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+}
+
+.item11-1x1-img6 {
+  grid-column: 3;
+  grid-row: 5;
+  margin-left: var(--grid-spacing);
+  margin-bottom: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+}
+
+.item12-1x1-txt6 {
+  grid-column: 4;
+  grid-row: 5;
+  margin-bottom: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+
   border-top: 1px solid rgb(236, 173, 15);
   width: 50%;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-.imageHalf2 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.imageHalf2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/*-----------------------------quote Container */
-.item7 {
-  grid-column: 1 / span 2;
+/*-----------------------------------------  QUOTE ROW     */
+.item13-2x1-quote1 {
+  grid-column: 2;
   grid-row: 6;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  aspect-ratio: 2 / 1;
+  margin-bottom: var(--grid-spacing);
+  margin-right: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+
+  display: flex;
+  flex-direction: column;
 }
 
-.item8 {
-  grid-column: 3 / span 2;
+.item14-2x1-quote2 {
+  grid-column: 3;
   grid-row: 6;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  aspect-ratio: 2 / 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--grid-spacing);
+  margin-bottom: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
 }
 
+/*--------------------------------  FONT -> QUOTE / AUTHOR   */
 blockquote {
   width: auto;
   margin-top: 28%;
@@ -483,7 +435,26 @@ blockquote::after {
   font-size: 0.6rem;
 }
 
-/*-----------------------------sideText Container */
+/*---------------------  LAST ROW -> CONTACT DATA / INFO TEXT   */
+.item15-1x2-txtContact {
+  grid-column: 1;
+  grid-row: 7 / span 2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+}
+
+.item16-4x4-txtBlock {
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--grid-spacing);
+  margin-top: var(--grid-spacing);
+}
+
+/*---------------------------------  FONT -> TXTCONTACT / TEXT   */
 .uppercaseBold {
   text-transform: uppercase;
   font-weight: bold;
@@ -492,7 +463,7 @@ blockquote::after {
   line-height: 2;
   margin-bottom: 1.5%;
 }
-.connectionText {
+.contactText {
   font-family: "montserrat", sans-serif;
   font-size: 0.5rem;
   line-height: 1.5;
@@ -509,18 +480,7 @@ blockquote::after {
   margin-right: calc(-1.2% * 4);
 }
 
-/*-----------------------------text Container */
-.item10 {
-  grid-column: 2 / span 2;
-  grid-row: 7 / span 2;
-  flex-direction: column;
-  margin-right: calc(-0.5% * 4);
-  margin-left: calc(-0.5% * 4);
-}
-
-/*-----------------------------sideText Container2 */
-.grid-sideText2 {
-  grid-column: 4;
-  grid-row: 7 / span 2;
-  margin-left: calc(-1.2% * 4);
+/* Halbe Reihen für alle Bildschirmgrößen */
+.half-row {
+  grid-row: span 0.5;
 }
