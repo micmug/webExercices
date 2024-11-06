@@ -15,7 +15,7 @@ a {
   color: inherit;
 }
 
-/*---------------------------------------- navbar */
+/*----------------------------------------              navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -29,7 +29,7 @@ a {
   z-index: 1000;
 }
 
-/*---------------------------------------- burgerMenu */
+/*----------------------------------------          burgerMenu */
 .burgerMenu {
   width: 30px;
   height: 30px;
@@ -56,7 +56,7 @@ a {
   background-color: rgb(236, 173, 15);
 }
 
-/*----------------------------------- burgerMenu-Dropdown */
+/*-----------------------------------      burgerMenu-Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -91,7 +91,7 @@ a {
   display: block;
 }
 
-/*-------------------------------------------navbar-label */
+/*-------------------------------------------    navbar-label */
 .label {
   flex-grow: 1;
   text-align: center;
@@ -108,7 +108,7 @@ a {
   position: relative;
 }
 
-/*-----------------------------navbar-label-tooltip-dialog & image */
+/*------------------------navbar-label-tooltip-dialog & image */
 
 .label-text::after {
   content: attr(data-tooltip);
@@ -169,7 +169,7 @@ a {
   padding: 10px 0;
 }
 
-/*------------------------------------------ navbar-logo */
+/*------------------------------------------      navbar-logo */
 .logo {
   width: 30px;
   height: 30px;
@@ -188,22 +188,22 @@ a {
     hue-rotate(359deg) brightness(105%) contrast(104%);
 }
 
-/*----------------------------     horizontal line/div   */
+/*---------------------------------     horizontal line/div   */
 .hr {
   background-color: rgb(236, 173, 15);
   height: 2px;
   border: none;
 }
 
-/*--------------------------------- gridlayout-wrapper */
+/*---------------------------------         gridlayout-wrapper */
 .wrapper {
   margin: 0 auto;
   padding: 30px;
 }
 
-/*----------------------------     gridlayout-fonts   */
+/*----------------------------    --------- gridlayout-fonts   */
 
-/* Basis-Layout für Desktop */
+/*----------------------------------- Basis-Layout für Desktop */
 
 .grid-container {
   display: grid;
@@ -227,7 +227,7 @@ a {
   aspect-ratio: 1 / 1;
 }
 
-/*---------------------------------------  ROW 1 IMAGES   */
+/*--------------------------------------------  ROW 1 IMAGES   */
 .item1-4x4-img1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
@@ -249,7 +249,7 @@ a {
   position: absolute;
   top: 0;
   left: -1rem;
-  width: 25%;
+  width: calc(25% + 1rem);
   height: 1px;
   background-color: rgb(236, 173, 15);
 }
@@ -272,7 +272,7 @@ a {
   padding-left: 5px;
 }
 
-/*---------------------------------------  ROW 2 IMAGES   */
+/*---------------------------------------       ROW 2 IMAGES   */
 .item5-1x1-txt3 {
   grid-column: 1;
   grid-row: 3;
@@ -316,15 +316,15 @@ a {
   align-items: flex-start;
   position: relative;
 
-  padding-top: 5px;
+  padding-top: calc(5px + 0.5rem);
 }
 
 .item7-2x1-txt4::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 25%;
+  top: 0.5rem;
+  right: -1rem;
+  width: calc(25% + 1rem);
   height: 1px;
   background-color: rgb(236, 173, 15);
 }
@@ -337,7 +337,7 @@ a {
   margin-top: var(--grid-spacing);
 }
 
-/*---------------------------------------  ROW 3 IMAGES   */
+/*---------------------------------------       ROW 3 IMAGES   */
 .item9-1x1-txt5 {
   grid-column: 1;
   grid-row: 5;
@@ -483,4 +483,292 @@ blockquote::after {
 /* Halbe Reihen für alle Bildschirmgrößen */
 .half-row {
   grid-row: span 0.5;
+}
+
+/*------------------------------------------ Tablet-Layout */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(16, 0.5fr); /* Ermöglicht halbe Reihen */
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    aspect-ratio: 2 / 1;
+  }
+
+  /*---------------------------------------  ROW 1 IMAGES   */
+  .item1-4x4-img1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
+    margin-right: var(--grid-spacing);
+    margin-bottom: var(--grid-spacing);
+  }
+
+  .item2-2x1-txt1 {
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: var(--grid-spacing);
+
+    position: relative;
+    padding-top: 5px;
+  }
+
+  .item2-2x1-txt1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 50%;
+    height: 1px;
+    background-color: rgb(236, 173, 15);
+  }
+
+  .item3-1x1-img2 {
+    grid-column: 3;
+    grid-row: 3 / span 2;
+    margin-left: var(--grid-spacing);
+    margin-bottom: var(--grid-spacing);
+  }
+
+  .item4-1x1-txt2 {
+    grid-column: 3;
+    grid-row: 2;
+    width: 100%;
+    border-top: none;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .item4-1x1-txt2::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgb(236, 173, 15);
+  }
+
+  .item4-1x1-txt2::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 20px);
+    right: 0;
+    width: 1px;
+    height: 30px;
+    background-color: rgb(236, 173, 15);
+  }
+
+  /*---------------------------------------  ROW 2 IMAGES   */
+  .item5-1x1-txt3 {
+    grid-column: 1;
+    grid-row: 7;
+    margin-top: var(--grid-spacing);
+
+    display: flex;
+    justify-content: flex-start; /* Ändert die Ausrichtung nach links */
+    align-items: flex-start;
+    position: relative;
+
+    padding-top: 0px;
+    padding-left: 10px;
+  }
+
+  .item5-1x1-txt3::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgb(236, 173, 15);
+  }
+  .item5-1x1-txt3::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 1px;
+    height: 30px;
+    background-color: rgb(236, 173, 15);
+  }
+
+  .item6-1x1-img3 {
+    grid-column: 1;
+    grid-row: 5 / span 2;
+    margin-right: var(--grid-spacing);
+    margin-top: var(--grid-spacing);
+  }
+
+  .item7-2x1-txt4 {
+    grid-column: 1;
+    grid-row: 8;
+    margin-bottom: var(--grid-spacing);
+    margin-top: var(--grid-spacing);
+    margin-right: var(--grid-spacing);
+    border-top: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+
+    padding-bottom: 5px;
+  }
+
+  .item7-2x1-txt4::before {
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: -1rem;
+    width: calc(50% + 1rem);
+    height: 1px;
+    background-color: rgb(236, 173, 15);
+  }
+
+  .item8-4x4-img4 {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 4;
+    margin-bottom: var(--grid-spacing);
+    margin-left: var(--grid-spacing);
+    margin-top: var(--grid-spacing);
+  }
+  /*---------------------------------------  ROW 3 IMAGES */
+  .item9-1x1-txt5 {
+    grid-column: 3;
+    grid-row: 9 / span 2;
+    margin: var(--grid-spacing) 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+
+    padding-left: 5px;
+    padding-right: 0;
+  }
+
+  .item9-1x1-txt5::before {
+    left: 0;
+    right: auto;
+    width: 50%;
+    height: 1px;
+    background-color: rgb(236, 173, 15);
+  }
+
+  .item10-1x1-img5 {
+    grid-column: 1 / span 2;
+    grid-row: 9 / span 2;
+    margin: var(--grid-spacing) 0;
+  }
+
+  .item11-1x1-img6 {
+    grid-column: 2 / span 2;
+    grid-row: 11 / span 2;
+    margin: var(--grid-spacing) 0;
+  }
+
+  .item12-1x1-txt6 {
+    grid-column: 1;
+    grid-row: 11 / span 2;
+    margin: var(--grid-spacing) 0;
+    border-top: none;
+    width: 100%;
+    padding-top: 5px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .item12-1x1-txt6::after {
+    content: "";
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgb(236, 173, 15);
+  }
+
+  /*-----------------------------------------  QUOTE ROW     */
+  .item13-2x1-quote1,
+  .item14-2x1-quote2 {
+    grid-column: 1 / span 3;
+    margin: var(--grid-spacing) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    height: auto;
+  }
+
+  .item13-2x1-quote1 blockquote,
+  .item14-2x1-quote2 blockquote {
+    width: 100%;
+    margin-top: 0;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 12.5%;
+  }
+
+  .item13-2x1-quote1 .author,
+  .item14-2x1-quote2 .author {
+    font-size: clamp(0.5rem, 1.5vw, 0.6rem);
+    margin-top: 5px;
+    padding-left: 25%;
+    align-self: flex-start; /* Richtet den Autor links aus */
+  }
+
+  .item13-2x1-quote1 {
+    grid-row: 13 / span 1;
+  }
+  .item14-2x1-quote2 {
+    grid-row: 14 / span 1;
+  }
+
+  /*---------------------  LAST ROW -> CONTACT DATA / INFO TEXT   */
+  .item15-1x2-txtContact {
+    grid-column: 1;
+    grid-row: 15 / span 4;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--grid-spacing);
+    margin-top: var(--grid-spacing);
+  }
+
+  .item16-4x4-txtBlock {
+    grid-column: 2 / span 2;
+    grid-row: 15 / span 4;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--grid-spacing);
+    margin-top: var(--grid-spacing);
+  }
+}
+
+/* Mobiles Layout */
+@media screen and (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(32, 0.25fr); /* Ermöglicht Viertel-Reihen */
+  }
+
+  /* Viertel-Reihen nur für mobile Geräte */
+  .quarter-row {
+    grid-row: span 0.25;
+  }
 }
