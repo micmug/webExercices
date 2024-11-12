@@ -970,6 +970,7 @@ blockquote::after {
   }
   .item12-1x1-txt6::before {
     top: auto;
+    display: none;
   }
 
   /*-----------------------------------------  QUOTE ROW     */
