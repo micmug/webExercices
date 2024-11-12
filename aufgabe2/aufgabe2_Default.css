@@ -10,43 +10,33 @@ body {
   flex-direction: column;
 }
 
-/* main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-} */
-
 main {
-  flex: 1;
   display: grid;
-  grid-template-rows: 100vh auto auto;
+  top: -3rem;
+  /* grid-template-rows: 100vh auto auto; */
+  /* flex: 1; */
+  /* min-height: 100vh; */
+  height: auto;
   position: relative;
 }
 
-/* ---------------------------------------------------------------------  HEADER ------- */
-header {
+/* ----------------------------------------------------------------  NAVBAR ------- */
+
+nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   width: 100%;
-  background-color: rgba(63, 102, 145, 0);
+  height: 2rem;
+  margin-top: 1rem;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-nav {
-  display: flex;
-  width: 100%;
-}
-
 nav ul {
   display: flex;
   list-style: none;
+  /* padding: 0; */
   margin-right: 3rem;
-  padding: 0;
   margin-left: auto;
 }
 
@@ -68,28 +58,25 @@ nav a:hover {
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
 }
 
-/* ---------------------------------------------------------------------  LANDING ------- */
+/* --------------------------------------------------------------GRID ROW 1 - LANDING ------- */
 
 .landing {
-  /* display: flex;
   width: 100%;
-  height: 100%; */
   height: 100vh;
   position: relative;
+  top: 0;
   grid-row: 1; /**/
 }
 
 .landing__text,
 .landing__image {
   position: absolute;
-  top: -4rem;
   left: 0;
   height: 100%;
   width: 100%;
 }
 
 .landing__text {
-  /* width: 33.33%; */
   background-color: #3498db;
   border: 2px solid black;
 
@@ -101,7 +88,6 @@ nav a:hover {
 }
 
 .landing__image {
-  /* width: 66.66%; */
   background-color: #e74c3c;
   border: 2px solid black;
 
@@ -112,48 +98,195 @@ nav a:hover {
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 33.33% 50%);
 }
 
-/* -------------------------------------------------------------  ICON CONTAINER ------- */
+/* ----------------------------------------------- GRID ROW 2 - MAJOR CONTENT CONTAINER ------- */
 
-.iconContainer {
-  /* position: absolute;
-  top: 70vh; */
+.majorContainer {
+  /* --> mC */
   position: relative;
-  margin-top: -30vh;
-  left: 0;
-  height: 60vh;
   width: 100%;
   z-index: 3;
-  clip-path: polygon(0% 0%, 50% 33.33%, 100% 0%, 100% 100%, 0% 100%);
+
+  /* margin-top: -30vh; */
+  /* height: 100vh; */
+  /* clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 80%, 50% 100%, 0% 80%); */
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /* min-height: 0;
+  height: auto; */
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 3rem;
-  background-color: #f1c40f;
+  align-items: center;
+  padding: 3rem 0;
+  background-color: #ffff55;
   border: 2px solid black;
+
   grid-row: 2;
 }
 
-.iconContainer__icon {
+/* -----------------------------------------------------  MAJOR C -> ICON ROW CONTAINER ------- */
+
+.majorContainer__iconRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  width: 75%;
+  background-color: #f1c40f;
+  border: 2px solid black;
+}
+
+.mC__iconRow__icon {
   background-color: #e67e22;
   border: 2px solid black;
   padding: 1rem 2rem;
-  margin: 0 2rem;
+  margin: 0.5rem 2rem;
 }
 
-/* -------------------------------------------------------------  CONTENT CONTAINER ------- */
+/* -----------------------------------------------------  MAJOR C -> BOX ROW CONTAINER ------- */
 
-.contentContainer {
-  display: grid;
+.majorContainer__boxRow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #e74c3c;
+  border: 2px solid black;
+  margin: 1rem 0;
+}
+
+.mC__boxRow__heading {
+  align-content: center;
+  margin: 0.1rem 0;
+  min-height: 1.5rem;
+  min-width: 3rem;
+  background-color: bisque;
+  border: 2px solid black;
+}
+/* ------------------------------------------  MAJOR C -> BOX ROW CONTAINER ------------------ */
+.mC__boxRow__itemRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  /* background-color: #f78d86; */
+  /* border: 2px solid black; */
+  margin: 0.1rem 0;
+}
+/* ----------------------------------------------  MAJOR C -> BOX ROW CONTAINER -->  BOX ------ */
+.mC__boxRow__itemRow--box {
+  flex: 1;
+  background-color: #e8e4e3;
+  border: 2px solid black;
+  margin-right: 1.5rem;
+
+  height: 30rem;
+}
+
+/* ----------------------------  MAJOR C -> BOX ROW CONTAINER ->  BOX -> TOP / BOTTOM BOX ------ */
+.box__topBox {
+  /* flex: 1; */
+  background-color: #e8e4e3;
+  border: 2px solid black;
+}
+
+.box__bottomBox {
+  flex: 1;
+  background-color: #e8e4e3;
+  border: 2px solid black;
+}
+
+/* ------------------------------------------  MAJOR C -> BOX ROW CONTAINER --> RIGHT BOX ------ */
+.mC__boxRow__itemRow--rightBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #e8e4e3; */
+  /* border: 2px solid black; */
+  height: 30rem;
+}
+
+.rightBox__dateBox {
+  flex: 1;
+  background-color: #e8e4e3;
+  border: 2px solid black;
+}
+
+/* -----------------------------------------------------  MAJOR C -> BUTTON ROW CONTAINER ------- */
+
+.mC__btnRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  width: 75%;
+  background-color: #f78d86;
+  border: 2px solid black;
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+}
+
+.mC__btnRow--action1-BTN,
+mC__btnRow--action2-BTN,
+mC__btnRow--action3-BTN {
+  margin-left: auto;
+}
+
+.mC__btnRow--back-BTN {
+  margin-right: 0.2rem;
+}
+
+.mC__btnRow--forth-BTN,
+.mC__btnRow--back-BTN {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #e8e4e3;
+  border: 2px solid black;
+}
+
+.mC__btnRow--action1-BTN {
+  width: 6rem;
+  height: 2rem;
+  background-color: #0bbd1d;
+  border: 2px solid black;
+}
+.mC__btnRow--action2-BTN {
+  width: 6rem;
+  height: 2rem;
+  background-color: #facc37;
+  border: 2px solid black;
+  margin-left: 3rem;
+}
+.mC__btnRow--action3-BTN {
+  width: 6rem;
+  height: 2rem;
+  background-color: #e8e4e3;
+  border: 2px solid black;
+  margin-left: 1rem;
+}
+
+/* ---------------------------------------------------    GRID ROW 3  FOOTER CONTAINER ------- */
+
+.footer {
+  position: relative;
+  /* margin-top: -30vh; */
+  left: 0;
+  min-height: 0;
+  height: auto;
+  width: 100%;
+  z-index: 3;
+  /* clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 100%, 0% 100%); */
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  /* height: 100%; */
-  width: 100%;
-  background-color: cadetblue;
-  z-index: 4;
+  background-color: #1abc9c;
+  border: 2px solid black;
   grid-row: 3;
-  min-height: 50vh;
 }
