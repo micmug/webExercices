@@ -34,7 +34,7 @@ nav ul {
   display: flex;
   list-style: none;
   /* padding: 0; */
-  margin-right: 3rem;
+  margin-right: 4rem;
   margin-left: auto;
 }
 
@@ -59,33 +59,41 @@ nav a:hover {
 /* --------------------------------------------------------------GRID ROW 1 - LANDING ------- */
 
 .landing {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 100vh;
   position: relative;
   top: 0;
-  grid-row: 1; /**/
+  grid-row: 1;
 }
 
-.landing__text,
-.landing__image {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
+.landing__shadow {
+  background-color: #2b97cd6d;
+  width: 35%;
+
+  z-index: 3;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
 }
 
 .landing__text {
-  background-color: #3498db;
-  border: 2px solid black;
-
+  margin-left: -2rem;
+  padding-left: 2rem;
+  overflow: visible;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background-color: #3498db;
+  height: 100%;
+  width: 100%;
+
   z-index: 2;
-  clip-path: polygon(0% 0%, 25% 0%, 33.33% 50%, 25% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
 }
 
 .landing__image {
+  flex: 1;
+  margin-left: -20rem;
   background-color: #e74c3c;
   border: 2px solid black;
 
@@ -93,7 +101,6 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 33.33% 50%);
 }
 
 /* ---------------------------------------------------- GRID ROW 2 - MAJOR CONTENT CONTAINER ------- */
@@ -122,7 +129,7 @@ nav a:hover {
   top: -10%;
   left: 0;
   width: 100%;
-  height: 120%;
+  height: 116%;
   z-index: -1;
   background-color: #ffff55;
   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%);
@@ -135,10 +142,8 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
+  margin-bottom: 3rem;
   width: 75%;
-  /* background-color: #f1c40f; */
-  /* border: 2px solid black; */
 }
 
 .mC__iconRow__icon {
@@ -161,7 +166,7 @@ nav a:hover {
   padding: 1rem 0;
   background-color: #e74c3c;
   border: 2px solid black;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 /* ---------------------------------------------------------  MAJOR C -> HEADING 1 CONTAINER ------- */
@@ -273,7 +278,7 @@ nav a:hover {
   /* background-color: #f78d86; */
   /* border: 2px solid black; */
   padding: 0.5rem 0;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 4rem 0;
 }
 
 .mC__btnRow--action1-BTN,
@@ -314,6 +319,41 @@ mC__btnRow--action3-BTN {
   background-color: #e8e4e3;
   border: 2px solid black;
   margin-left: 1rem;
+}
+
+/* -----------------------------------------------------  MAJOR C -> INFO BAR CONTAINER ------- */
+
+.mC__infoBar {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+
+  width: 75%;
+  height: 6rem;
+  margin-top: -5rem;
+}
+
+.mC__infoBar__icon-txt {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(30, 147, 210);
+  width: 25%;
+  height: 100%;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+
+.mC__infoBar__infoText-backForthBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgb(117, 209, 255);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 2% 50%);
 }
 
 /* -----------------------------------------------------  MAJOR C -> HEADING 2 CONTAINER ------- */
@@ -421,7 +461,32 @@ mC__btnRow--action3-BTN {
 .footer__bottomBar {
   width: 75%;
   height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: #fff;
   border: 1px solid black;
   margin: 1rem 0 3rem 0;
+}
+
+.footer__bottomBar__impressum {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: bisque;
+}
+
+.footer__bottomBar__icons {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: gold;
 }
