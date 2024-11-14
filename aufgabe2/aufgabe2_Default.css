@@ -64,10 +64,18 @@ nav a:hover {
   top: 0;
   grid-row: 1;
 }
+.landing__image {
+  width: 100%;
+  padding-right: 4rem;
+  background-color: #e74c3c;
 
+  display: flex;
+  z-index: 1;
+}
 .landing__shadow {
   background-color: #2b97cd6d;
   width: 35%;
+  height: 100%;
 
   z-index: 3;
   /* clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%); */
@@ -75,8 +83,6 @@ nav a:hover {
 
 .landing__text {
   margin-left: -2rem;
-  padding-left: 2rem;
-  overflow: visible;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -114,25 +120,12 @@ nav a:hover {
   background-color: #b5e1ff;
 }
 
-.landing__image {
-  flex: 1;
-  margin-left: -20rem;
-  padding-right: 4rem;
-  background-color: #e74c3c;
-  border: 2px solid black;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 0 10% 15% 0;
-  z-index: 1;
-}
-
 .dot-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin: 25% 15% 0 auto;
 }
 
 .dot {
@@ -204,7 +197,6 @@ nav a:hover {
   background-color: #e67e22;
   border: 2px solid black;
   padding: 1rem 2rem;
-  margin: 0.5rem 2rem;
 }
 
 /* -----------------------------------------------------------  MAJOR C -> BOX ROW CONTAINER ------- */
@@ -242,25 +234,33 @@ nav a:hover {
   flex-direction: row;
   justify-content: space-between;
   width: 75%;
-  /* background-color: #f78d86; */
-  /* border: 2px solid black; */
   margin: 0.1rem 0;
 }
 /* ----------------------------------------------  MAJOR C -> BOX ROW ITEM CONTAINERS -->  BOX ------ */
-.mC__boxRow__itemRow--box {
+.mC__boxRow__itemRow__box {
   flex: 1;
-  background-color: #fff;
-  border: 2px solid black;
   margin-right: 1.5rem;
-  height: 30rem;
   display: flex;
   flex-direction: column;
 }
 
 /* --------------------------------  MAJOR C -> BOX ROW CONTAINER ->  BOX -> TOP / BOTTOM BOX ------ */
+.box__bottomBox {
+  background-color: #d4d2d1;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  aspect-ratio: 1/1.25;
+}
+
 .box__topBox {
   background-color: #78ff85;
-  height: 50%;
+  width: 100%;
+  height: 45%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
   z-index: 5;
 
@@ -269,52 +269,34 @@ nav a:hover {
   align-items: center;
 }
 
-.box__bottomBox {
-  background-color: #d4d2d1;
-  width: 100%;
-  height: 100%;
-  margin-top: -3rem;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* ----------------------------------------------  MAJOR C -> BOX ROW CONTAINER --> RIGHT BOX ------ */
-.mC__boxRow__itemRow--rightBox {
+.mC__boxRow__itemRow__rightBox {
   flex: 1;
   display: flex;
   flex-direction: column;
-
-  height: 30rem;
 }
 
 .rightBox__dateBox {
   flex: 1;
-  background-color: #fff;
-  border: 2px solid black;
   display: flex;
   flex-direction: row;
 }
-
-.dateBox__date {
-  width: 30%;
-  background-color: #78ff85;
-  clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 50%, 80% 0%);
-  z-index: 5;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .dateBox__dateText {
   width: 100%;
   height: 100%;
   background-color: #e8e4e3;
-  margin-left: -3rem;
-  overflow: hidden;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dateBox__date {
+  height: 100%;
+  width: 25%;
+  background-color: #78ff85;
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 100% 50%, 50% 0%);
+  z-index: 5;
 
   display: flex;
   justify-content: center;
@@ -329,8 +311,6 @@ nav a:hover {
   flex-direction: row;
 
   width: 75%;
-  /* background-color: #f78d86; */
-  /* border: 2px solid black; */
   padding: 0.5rem 0;
   margin: 1rem 0 4rem 0;
 }
@@ -463,25 +443,21 @@ mC__btnRow--action3-BTN {
 
 .mC__imageRow__infoBox {
   flex: 1;
-  width: 100%;
-  height: 100%;
   background-color: rgba(120, 255, 133, 0.5);
   border: 2px solid black;
-  aspect-ratio: 1/1;
 }
 /* ---------------------------------------------------    GRID ROW 3  FOOTER CONTAINER ------- */
 
 .footer {
   position: relative;
-  min-height: 0;
-  height: auto;
-  width: 100%;
   z-index: 2;
-
   display: flex;
   flex-direction: column;
   justify-items: flex-end;
   align-items: center;
+
+  width: 100%;
+  height: auto;
 
   padding-top: 12.5%;
   background-color: #1abc9c;
@@ -496,14 +472,11 @@ mC__btnRow--action3-BTN {
   justify-items: center;
   align-items: center;
   width: 75%;
-  height: auto;
-  background-color: #fff;
   margin: 0.5rem 0;
 }
 
 .footer__textArea__textBtn {
   width: 25%;
-  height: 100%;
   background-color: #fff;
   border: 1px solid black;
   margin: 0.5rem 0;
@@ -533,11 +506,9 @@ mC__btnRow--action3-BTN {
 
 .footer__textArea__image {
   width: 50%;
-  height: 100%;
   background-color: #fff;
   border: 1px solid black;
   margin: 0.5rem 0;
-  aspect-ratio: 2/1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -584,4 +555,103 @@ mC__btnRow--action3-BTN {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1023px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 3rem;
+  }
+
+  .landing {
+    height: 100vh;
+  }
+
+  .landing__text {
+    padding: 40% 30%;
+    background-color: #3498db;
+  }
+
+  .majorContainer::before {
+    top: -6%;
+    height: 100%;
+  }
+
+  .majorContainer__iconRow {
+    justify-content: space-between;
+  }
+
+  .mC__boxRow__itemRow {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 1.5rem;
+    width: 75%;
+  }
+  .mC__boxRow__itemRow__box,
+  .mC__boxRow__itemRow__rightBox {
+    flex-basis: calc(45% - 1rem);
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .mC__boxRow__itemRow__rightBox {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    aspect-ratio: 4/1;
+    gap: 1.5rem;
+  }
+
+  .mC__imageRow {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .mC__imageRow__imageBox,
+  .mC__imageRow__infoBox {
+    margin: 0;
+    flex-basis: 40%;
+  }
+
+  .footer__textArea {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0;
+  }
+
+  .footer__textArea__textBtn {
+    flex-basis: calc(50% - 0.75rem);
+    width: 50%;
+    margin: 0;
+  }
+
+  .footer__textArea__image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer__bottomBar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer__bottomBar__impressum,
+  .footer__bottomBar__iconRow {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .mC__btnRow,
+  .mC__infoBar {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
 }
