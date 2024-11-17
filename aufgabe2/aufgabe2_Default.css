@@ -78,7 +78,6 @@ nav a:hover {
   height: 100%;
 
   z-index: 3;
-  /* clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%); */
 }
 
 .landing__text {
@@ -125,7 +124,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 25% 15% 0 auto;
+  margin: 35% 10% 0 auto;
 }
 
 .dot {
@@ -163,7 +162,7 @@ nav a:hover {
 .majorContainer::before {
   content: "";
   position: absolute;
-  top: -10%;
+  top: -6%;
   left: 0;
   width: 100%;
   height: 116%;
@@ -274,6 +273,7 @@ nav a:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
 }
 
 .rightBox__dateBox {
@@ -335,20 +335,20 @@ mC__btnRow--action3-BTN {
 }
 
 .mC__btnRow--action1-BTN {
-  width: 6rem;
+  width: 5rem;
   height: 2rem;
   background-color: #0bbd1d;
   border: 2px solid black;
 }
 .mC__btnRow--action2-BTN {
-  width: 6rem;
+  width: 5rem;
   height: 2rem;
   background-color: #facc37;
   border: 2px solid black;
   margin-left: 1rem;
 }
 .mC__btnRow--action3-BTN {
-  width: 6rem;
+  width: 5rem;
   height: 2rem;
   background-color: #e8e4e3;
   border: 2px solid black;
@@ -410,6 +410,7 @@ mC__btnRow--action3-BTN {
   flex-direction: row;
   justify-content: space-between;
   width: 75%;
+  margin-bottom: 3rem;
 }
 
 .mC__imageRow__imageBox,
@@ -457,7 +458,7 @@ mC__btnRow--action3-BTN {
   align-items: center;
 
   width: 100%;
-  height: auto;
+  /* height: auto; */
 
   padding-top: 12.5%;
   background-color: #1abc9c;
@@ -477,6 +478,7 @@ mC__btnRow--action3-BTN {
 
 .footer__textArea__textBtn {
   width: 25%;
+  /* height: 50vh; */
   background-color: #fff;
   border: 1px solid black;
   margin: 0.5rem 0;
@@ -556,6 +558,7 @@ mC__btnRow--action3-BTN {
   justify-content: center;
   align-items: center;
 }
+/* --------------------------------------------    MEDIA QUERY TABLET MAX-WIDHT 1023  ------- */
 @media screen and (max-width: 1023px) {
   * {
     margin: 0;
@@ -574,14 +577,15 @@ mC__btnRow--action3-BTN {
   }
 
   .landing__text {
-    padding: 40% 30%;
+    justify-content: center;
+    /* padding: 40% 30%; */
     background-color: #3498db;
   }
 
   .majorContainer::before {
-    top: -5%;
-    height: 110%;
-    --clip-angle: 1.86deg;
+    top: -3%;
+    height: 108%;
+    --clip-angle: 1.5deg;
     clip-path: polygon(
       0 0,
       50% calc(100% * tan(var(--clip-angle))),
@@ -651,9 +655,9 @@ mC__btnRow--action3-BTN {
 
   .footer__textArea__image {
     width: 100%;
-    aspect-ratio: 1/1;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer__bottomBar {
@@ -666,5 +670,146 @@ mC__btnRow--action3-BTN {
     width: 100%;
     justify-content: center;
     padding: 0.5rem 0;
+  }
+}
+
+/* --------------------------------------------    MEDIA QUERY MOBILE MAX-WIDHT 768  ------- */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    flex: 0;
+    margin-right: 1.5rem;
+    margin-left: auto;
+  }
+
+  .landing__image {
+    padding-right: 2rem;
+  }
+
+  .landing__shadow,
+  .landing__text {
+    --clip-angle: 30deg; /* Definiert den Winkel */
+    clip-path: polygon(
+      0% 0%,
+      calc(100% - (100% * tan(var(--clip-angle)))) 0%,
+      100% 50%,
+      calc(100% - (100% * tan(var(--clip-angle)))) 100%,
+      0% 100%
+    );
+  }
+
+  .dot-container {
+    margin: auto 0 20% auto;
+  }
+
+  .majorContainer::before {
+    top: -2%;
+    height: 105%;
+    --clip-angle: 0.8deg;
+    clip-path: polygon(
+      0 0,
+      50% calc(100% * tan(var(--clip-angle))),
+      100% 0,
+      100% calc(100% - (100% * tan(var(--clip-angle)))),
+      50% 100%,
+      0 calc(100% - (100% * tan(var(--clip-angle))))
+    );
+  }
+
+  .majorContainer__iconRow {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .mC__iconRow__icon {
+    background-color: #e67e22;
+    border: 2px solid black;
+    padding: 1rem 1rem;
+    margin: 1rem 0.5rem 0 0.5rem;
+  }
+
+  .mC__boxRow__itemRow {
+    flex-wrap: wrap;
+    width: 85%;
+  }
+
+  .mC__boxRow__itemRow__rightBox {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+
+  .mC__boxRow__itemRow__box,
+  .mC__boxRow__itemRow__rightBox {
+    flex: 1 1 100%;
+  }
+
+  .mC__btnRow {
+    flex-wrap: wrap;
+  }
+
+  /* Container für die ersten beiden Buttons */
+  .mC__btnRow::before {
+    content: "";
+    flex-basis: 100%;
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+
+  .mC__btnRow--forth-BTN,
+  .mC__btnRow--back-BTN {
+    flex: 0 0 auto;
+    /* order: -1; */
+  }
+
+  .mC__btnRow--back-BTN {
+    margin-right: 0.5rem;
+  }
+
+  /* Container für die Action-Buttons */
+  .mC__btnRow::after {
+    content: "";
+    flex-basis: 100%;
+  }
+
+  .mC__btnRow--action1-BTN {
+    margin-left: 0;
+  }
+
+  .mC__btnRow--action1-BTN,
+  .mC__btnRow--action2-BTN,
+  .mC__btnRow--action3-BTN {
+    display: flex;
+    justify-content: space-between;
+    order: 2;
+    margin-top: 0.5rem;
+  }
+
+  .mC__btnRow--action1-BTN {
+    background-color: #0bbd1d;
+  }
+
+  .mC__btnRow--action2-BTN,
+  .mC__btnRow--action3-BTN {
+    margin-left: auto;
+  }
+
+  .mC__infoBar {
+    width: 100%;
+  }
+
+  .mC__imageRow {
+    flex-wrap: wrap;
+  }
+  .mC__imageRow__imageBox,
+  .mC__imageRow__infoBox {
+    flex-basis: 100%;
+  }
+  .footer {
+    padding-top: 8rem;
+  }
+  .footer__textArea__textBtn {
+    flex-wrap: wrap;
+    flex-basis: 100%;
   }
 }
