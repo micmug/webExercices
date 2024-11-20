@@ -77,7 +77,7 @@ nav a:hover {
   width: 35%;
   height: 100%;
 
-  z-index: 3;
+  z-index: 1;
 }
 
 .landing__text {
@@ -91,12 +91,12 @@ nav a:hover {
   height: 100%;
   width: 100%;
 
-  z-index: 2;
+  z-index: 4;
 }
 
 .landing__shadow,
 .landing__text {
-  --clip-angle: 10deg; /* Definiert den Winkel */
+  --clip-angle: 10deg;
   clip-path: polygon(
     0% 0%,
     calc(100% - (100% * tan(var(--clip-angle)))) 0%,
@@ -107,14 +107,13 @@ nav a:hover {
 }
 
 .landing__text__bigIcon {
-  width: 100%;
+  width: auto;
   height: auto;
-  background-color: #b5e1ff;
 }
 
 .landing__text__linkList {
   margin-top: 2rem;
-  width: 100%;
+  width: auto;
   height: auto;
   background-color: #b5e1ff;
 }
@@ -130,7 +129,6 @@ nav a:hover {
 .dot {
   width: 10px;
   height: 10px;
-  background-color: #ffffff;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -154,7 +152,7 @@ nav a:hover {
   align-items: center;
 
   padding: 3rem 0 0 0;
-  background-color: #ffff55;
+  background-color: #ffe855;
   border: 2px solid black;
 
   grid-row: 2;
@@ -163,8 +161,8 @@ nav a:hover {
   content: "";
   position: absolute;
   top: -6%;
-  left: 0;
-  width: 100%;
+  left: -1%;
+  width: 102%;
   height: 116%;
   z-index: -1;
   background-color: #ffff55;
@@ -222,8 +220,6 @@ nav a:hover {
   align-items: center;
   justify-items: center;
   margin: 2rem 0 2rem 0;
-  height: 3rem;
-  width: 6rem;
   background-color: bisque;
   border: 2px solid black;
 }
@@ -245,7 +241,7 @@ nav a:hover {
 
 /* --------------------------------  MAJOR C -> BOX ROW CONTAINER ->  BOX -> TOP / BOTTOM BOX ------ */
 .box__bottomBox {
-  background-color: #d4d2d1;
+  background-color: #232323;
   width: 100%;
   height: 100%;
 
@@ -254,6 +250,7 @@ nav a:hover {
   justify-content: flex-start;
   align-items: center;
   aspect-ratio: 1/1.25;
+  /* padding: 0 1rem; */
 }
 
 .box__topBox {
@@ -265,7 +262,16 @@ nav a:hover {
 
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.box__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin: 1rem 1rem;
 }
 
 /* ----------------------------------------------  MAJOR C -> BOX ROW CONTAINER --> RIGHT BOX ------ */
@@ -284,7 +290,7 @@ nav a:hover {
 .dateBox__dateText {
   width: 100%;
   height: 100%;
-  background-color: #e8e4e3;
+  background-color: #232323;
 
   display: flex;
   justify-content: flex-start;
@@ -301,6 +307,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 2rem;
 }
 
 /* --------------------------------------------------------  MAJOR C -> BUTTON ROW CONTAINER ------- */
@@ -330,25 +337,19 @@ mC__btnRow--action3-BTN {
   width: 1.5rem;
   height: 1.5rem;
   margin-top: 0.3rem;
-  background-color: #e8e4e3;
-  border: 2px solid black;
+  background-color: #f1613d;
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .mC__btnRow--action1-BTN {
-  width: 5rem;
+  width: auto;
   height: 2rem;
   background-color: #0bbd1d;
   border: 2px solid black;
 }
-.mC__btnRow--action2-BTN {
-  width: 5rem;
-  height: 2rem;
-  background-color: #facc37;
-  border: 2px solid black;
-  margin-left: 1rem;
-}
+.mC__btnRow--action2-BTN,
 .mC__btnRow--action3-BTN {
-  width: 5rem;
+  width: auto;
   height: 2rem;
   background-color: #e8e4e3;
   border: 2px solid black;
@@ -363,7 +364,7 @@ mC__btnRow--action3-BTN {
   display: flex;
   flex-direction: row;
   align-content: center;
-
+  background-color: rgb(0, 0, 0);
   width: 75%;
   height: 6rem;
   margin-top: -5rem;
@@ -420,6 +421,8 @@ mC__btnRow--action3-BTN {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Verhindert, dass der Inhalt überläuft */
+  position: relative; /* Für die absolute Positionierung des Bildes */
 }
 
 .mC__imageRow__imageBox {
@@ -430,9 +433,22 @@ mC__btnRow--action3-BTN {
   justify-content: flex-end;
 }
 
+.box__topBox img,
+.mC__imageRow__infoBox img,
+.mC__imageRow__imageBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Passt das Bild an, ohne das Seitenverhältnis zu ändern */
+  z-index: 1; /* Stellt sicher, dass das Bild unter dem Text liegt */
+}
+
 .imageBox--text {
   width: 100%;
   height: 30%;
+  bottom: -0.5rem;
   background-color: rgba(120, 255, 133, 0.5);
   clip-path: polygon(0% 30%, 50% 0%, 100% 30%, 100% 100%, 0% 100%);
   z-index: 5;
@@ -440,6 +456,7 @@ mC__btnRow--action3-BTN {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative; /* Behält den Text über dem Bild */
 }
 
 .mC__imageRow__infoBox {
@@ -458,9 +475,8 @@ mC__btnRow--action3-BTN {
   align-items: center;
 
   width: 100%;
-  /* height: auto; */
 
-  padding-top: 12.5%;
+  padding-top: 15.5%;
   background-color: #1abc9c;
   grid-row: 3;
 }
@@ -470,50 +486,41 @@ mC__btnRow--action3-BTN {
 .footer__textArea {
   display: flex;
   flex-direction: row;
-  justify-items: center;
-  align-items: center;
+  align-items: flex-start;
   width: 75%;
-  margin: 0.5rem 0;
 }
 
 .footer__textArea__textBtn {
   width: 25%;
-  /* height: 50vh; */
   background-color: #fff;
   border: 1px solid black;
   margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
-  justify-items: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.footer__textArea__textBtn__text1 {
-  width: fit-content;
-}
-
-.footer__textArea__textBtn__btn1 {
-  width: fit-content;
-}
-
-.footer__textArea__textBtn__text2 {
-  width: fit-content;
-}
-
+.footer__textArea__textBtn__text1,
+.footer__textArea__textBtn__btn1,
+.footer__textArea__textBtn__text2,
 .footer__textArea__textBtn__btn2 {
   width: fit-content;
+  padding: 10% 0 auto 0;
 }
 
 /* -----------------------------------------    GRID ROW 3  FOOTER CONTAINER-TEXT AREA-IMAGE   ------- */
 
 .footer__textArea__image {
   width: 50%;
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid black;
   margin: 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Verhindert, dass der Inhalt überläuft */
+  position: relative; /* Für die absolute Positionierung des Bildes */
 }
 
 /* --------------------------------------------    GRID ROW 3  FOOTER CONTAINER-BOTTOM BAR   ------- */
@@ -644,20 +651,39 @@ mC__btnRow--action3-BTN {
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 3rem;
+    /* padding-top: 3rem; */
   }
 
   .footer__textArea__textBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-basis: calc(50% - 0.75rem);
     width: 50%;
-    height: 25vh;
+    height: auto;
     margin: 0;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .footer__textArea__textBtn__text1,
+  .footer__textArea__textBtn__text2 {
+    flex-grow: 1;
+  }
+
+  .footer__textArea__textBtn__btn1,
+  .footer__textArea__textBtn__btn2 {
+    align-self: flex-start;
+    margin-top: 1rem;
   }
 
   .footer__textArea__image {
     width: 100%;
-    height: 30vh;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  .footer__textArea__image img {
+    width: 100%;
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    display: block; /* Verhindert unerwünschte Abstände unter dem Bild */
   }
 
   .footer__bottomBar {
@@ -670,6 +696,20 @@ mC__btnRow--action3-BTN {
     width: 100%;
     justify-content: center;
     padding: 0.5rem 0;
+  }
+  .mC__btnRow--action1-BTN {
+    width: auto;
+    height: 2rem;
+    background-color: #0bbd1d;
+    border: 2px solid black;
+  }
+  .mC__btnRow--action2-BTN,
+  .mC__btnRow--action3-BTN {
+    width: auto;
+    height: 2rem;
+    background-color: #e8e4e3;
+    border: 2px solid black;
+    margin-left: 1rem;
   }
 }
 

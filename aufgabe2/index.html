@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="aufgabe2_Default.css" />
+    <link rel="stylesheet" href="aufgabe2_Style.css" />
     <script src="aufgabe2_JavaScript.js" defer></script>
     <title>aufgabe2</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Content_1</a></li>
-        <li><a href="#">Content_2</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a class="linksNavbar" href="index.html">Home</a></li>
+        <li><a class="linksNavbar" href="#">Content_1</a></li>
+        <li><a class="linksNavbar" href="#">Content_2</a></li>
+        <li><a class="linksNavbar" href="#">Contact</a></li>
       </ul>
     </nav>
 
@@ -23,11 +24,18 @@
         <div class="landing__image">
           <div class="landing__shadow">
             <div class="landing__text">
-              <div class="landing__text__bigIcon">bigIcon</div>
-              <div class="landing__text__linkList">linkList</div>
+              <div class="landing__text__bigIcon">
+                <img src="./images/icons/icons8-stone-64.png" alt="BigIcon" />
+              </div>
+              <div class="landing__text__linkList">
+                <p class="landing_p"><span class="icon"></span>egestas</p>
+                <p class="landing_p"><span class="icon"></span>posuere</p>
+                <p class="landing_p"><span class="icon"></span>lacinia</p>
+                <p class="landing_p"><span class="icon"></span>viverra</p>
+                <p class="landing_p"><span class="icon"></span>dictum ut</p>
+              </div>
             </div>
           </div>
-          landing__image
           <div class="dot-container">
             <a href="#" class="dot"></a>
             <a href="#" class="dot"></a>
@@ -38,109 +46,245 @@
 
       <section class="majorContainer">
         <div class="majorContainer__iconRow">
-          <div class="mC__iconRow__icon">icon1</div>
-          <div class="mC__iconRow__icon">icon2</div>
-          <div class="mC__iconRow__icon">icon3</div>
-          <div class="mC__iconRow__icon">icon4</div>
-          <div class="mC__iconRow__icon">icon5</div>
+          <div class="mC__iconRow__icon">
+            <img src="./images/icons/icons8-stone-64.png" alt="LittleIcon_1" />
+          </div>
+          <div class="mC__iconRow__icon">
+            <img
+              src="./images/icons/icons8-sichtbar-100.png"
+              alt="LittleIcon_2"
+            />
+          </div>
+          <div class="mC__iconRow__icon">
+            <img
+              src="./images/icons/icons8-diamant-100.png"
+              alt="LittleIcon_3"
+            />
+          </div>
+          <div class="mC__iconRow__icon">
+            <img
+              src="./images/icons/icons8-konnektivität-und-hilfe-100.png"
+              alt="LittleIcon_4"
+            />
+          </div>
+          <div class="mC__iconRow__icon">
+            <img
+              src="./images/icons/icons8-steinpfeilspitze-100.png"
+              alt="LittleIcon_5"
+            />
+          </div>
         </div>
 
         <div class="majorContainer__boxRow">
-          <div class="mC__boxRow__heading">HEADING 1</div>
+          <div class="mC__boxRow__heading">
+            <h2>maecenas massa augue</h2>
+            <p>-----</p>
+          </div>
 
           <div class="mC__boxRow__itemRow">
             <div class="mC__boxRow__itemRow__box">
               <div class="box__bottomBox">
-                <div class="box__topBox">box__topBox</div>
-                box__bottomBox
+                <div class="box__topBox">
+                  <img src="./images/architektur/wall3s.jpg" alt="image 1" />
+                </div>
+                <div class="box__text">
+                  <h3>consequat</h3>
+
+                  <p class="info_p_white">
+                    <br />
+                    Ut scelerisque neque nec diam elementum euismod. Sed
+                    vestibulum ullamcorper odio, et convallis magna.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div class="mC__boxRow__itemRow__box">
               <div class="box__bottomBox">
-                <div class="box__topBox">box__topBox</div>
-                box__bottomBox
+                <div class="box__topBox">
+                  <img src="./images/architektur/wall3s.jpg" alt="image 1" />
+                </div>
+                <div class="box__text">
+                  <h3>elementum</h3>
+
+                  <p class="info_p_white">
+                    <br />
+                    Donec facilisis interdum blandit. Duis id lacus porttitor,
+                    ultricies erat in, dictum lectus. Duis volutpat interdum
+                    tellus, et mollis leo.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div class="mC__boxRow__itemRow__rightBox">
               <div class="rightBox__dateBox">
                 <div class="dateBox__dateText">
-                  <div class="dateBox__date">dateBox__date</div>
-                  dateBox__dateText
+                  <div class="dateBox__date"></div>
+                  <h4>euismod</h4>
                 </div>
               </div>
 
               <div class="rightBox__dateBox">
                 <div class="dateBox__dateText">
-                  <div class="dateBox__date">dateBox__date</div>
-                  dateBox__dateText
+                  <div class="dateBox__date"></div>
+                  <h4>libero</h4>
                 </div>
               </div>
               <div class="rightBox__dateBox">
                 <div class="dateBox__dateText">
-                  <div class="dateBox__date">dateBox__date</div>
-                  dateBox__dateText
+                  <div class="dateBox__date"></div>
+                  <h4>faucibus</h4>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="mC__btnRow">
-            <button class="mC__btnRow--back-BTN">&lt</button>
-            <button class="mC__btnRow--forth-BTN">&gt</button>
-            <button class="mC__btnRow--action1-BTN">action1</button>
-            <button class="mC__btnRow--action2-BTN">action2</button>
-            <button class="mC__btnRow--action3-BTN">action3</button>
+            <button class="mC__btnRow--back-BTN">
+              <img src="./images/icons/icons8-back.png" alt="&lt" />
+            </button>
+            <button class="mC__btnRow--forth-BTN">
+              <img src="./images/icons/icons8-forth.png" alt="&gt" />
+            </button>
+            <button class="mC__btnRow--action1-BTN">
+              <p class="info_p_white">consequat</p>
+            </button>
+            <button class="mC__btnRow--action2-BTN">
+              <p class="info_p_white">aliquam</p>
+            </button>
+            <button class="mC__btnRow--action3-BTN">
+              <p class="info_p_black">commodo</p>
+            </button>
           </div>
         </div>
         <div class="mC__infoBar">
-          <div class="mC__infoBar__icon-txt">icon txt</div>
+          <div class="mC__infoBar__icon-txt">
+            <p class="p_black_large">tempus</p>
+          </div>
           <div class="mC__infoBar__infoText-backForthBtn">
-            <div class="infoText-backForthBtn__infoText">infoText</div>
-            <button class="mC__btnRow--back-BTN">&lt</button>
-            <button class="mC__btnRow--forth-BTN">&gt</button>
+            <div class="infoText-backForthBtn__infoText">
+              <p class="info_p_black">
+                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit..."
+              </p>
+            </div>
+            <button class="mC__btnRow--back-BTNw">
+              <img src="./images/icons/icons8-back.png" alt="&lt" />
+            </button>
+            <button class="mC__btnRow--forth-BTNw">
+              <img src="./images/icons/icons8-forth.png" alt="&gt" />
+            </button>
           </div>
         </div>
-        <div class="mC__boxRow__heading">HEADING 2</div>
+        <div class="mC__boxRow__heading">
+          <h2>vehicula quis vulputate</h2>
+          <p>-----</p>
+        </div>
 
         <div class="mC__imageRow">
           <div class="mC__imageRow__imageBox">
-            image 1
-            <div class="imageBox--text">imageBox--text 1</div>
+            <img src="./images/architektur/gassen.jpg" alt="image 1" />
+            <div class="imageBox--text">
+              <p class="p_black">Maecenas at magna</p>
+            </div>
           </div>
           <div class="mC__imageRow__imageBox">
-            image 2
-            <div class="imageBox--text">imageBox--text 2</div>
+            <img src="./images/architektur/altetreppe.jpg" alt="image 1" />
+            <div class="imageBox--text">
+              <p class="p_black">Nunc volutpat velit</p>
+            </div>
           </div>
           <div class="mC__imageRow__imageBox">
-            image 3
-            <div class="imageBox--text">imageBox--text 3</div>
+            <img src="./images/architektur/balkon.jpg" alt="image 1" />
+            <div class="imageBox--text">
+              <p class="p_black">Suspendisse facilisis</p>
+            </div>
           </div>
-          <div class="mC__imageRow__infoBox">info</div>
+          <div class="mC__imageRow__infoBox">
+            <img src="./images/architektur/door.jpg" alt="image 1" />
+          </div>
         </div>
       </section>
 
       <section class="footer">
         <div class="footer__textArea">
           <div class="footer__textArea__textBtn">
-            <div class="footer__textArea__textBtn__text1">text1</div>
-            <button class="footer__textArea__textBtn__btn1">btn1</button>
+            <div class="footer__textArea__textBtn__text1">
+              <p class="p_white">
+                Ut scelerisque neque nec diam elementum euismod. Sed vestibulum
+                ullamcorper odio, et convallis magna. Vestibulum ipsum libero,
+                commodo in dolor vitae, iaculis rhoncus elit. Aliquam et
+                placerat eros. Donec facilisis interdum blandit. Duis id lacus
+                porttitor, ultricies erat in, dictum lectus. Duis volutpat
+                interdum tellus, et mollis leo.
+              </p>
+            </div>
+            <button class="footer__textArea__textBtn__btn1">
+              <img
+                src="./images/icons/icons8-diamant-100.png"
+                alt="LittleIcon_3"
+              />
+            </button>
           </div>
+
           <div class="footer__textArea__textBtn">
-            <div class="footer__textArea__textBtn__text2">text2</div>
-            <button class="footer__textArea__textBtn__btn2">btn2</button>
+            <div class="footer__textArea__textBtn__text2">
+              <p class="p_white">
+                Vestibulum nec congue mi. Morbi congue mi eget malesuada
+                rhoncus. Vestibulum vel odio odio. Maecenas nisi nunc, elementum
+                ut nisl sit amet, vestibulum feugiat neque. Phasellus non
+                hendrerit nulla, ac faucibus metus.
+              </p>
+            </div>
+            <button class="footer__textArea__textBtn__btn2">
+              <img
+                src="./images/icons/icons8-diamant-100.png"
+                alt="LittleIcon_3"
+              />
+            </button>
           </div>
-          <div class="footer__textArea__image">footer__image</div>
+
+          <div class="footer__textArea__image">
+            <img src="./images/architektur/tor.jpg" alt="image 1" />
+          </div>
         </div>
+
         <div class="footer__bottomBar">
-          <div class="footer__bottomBar__impressum">impressum</div>
+          <div class="footer__bottomBar__impressum">
+            <p class="info_p_white">impressum</p>
+          </div>
           <div class="footer__bottomBar__iconRow">
-            <div class="footer__bottomBar__iconRow__icon">icon1</div>
-            <div class="footer__bottomBar__iconRow__icon">icon2</div>
-            <div class="footer__bottomBar__iconRow__icon">icon3</div>
-            <div class="footer__bottomBar__iconRow__icon">icon4</div>
-            <div class="footer__bottomBar__iconRow__icon">icon5</div>
+            <div class="footer__bottomBar__iconRow__icon">
+              <img
+                src="./images/icons/icons8-statue-96.png"
+                alt="LittleIcon_4"
+              />
+            </div>
+            <div class="footer__bottomBar__iconRow__icon">
+              <img
+                src="./images/icons/icons8-suche-100.png"
+                alt="LittleIcon_4"
+              />
+            </div>
+            <div class="footer__bottomBar__iconRow__icon">
+              <img
+                src="./images/icons/icons8-coal-100.png"
+                alt="LittleIcon_4"
+              />
+            </div>
+            <div class="footer__bottomBar__iconRow__icon">
+              <img
+                src="./images/icons/icons8-informationen-100.png"
+                alt="LittleIcon_4"
+              />
+            </div>
+            <div class="footer__bottomBar__iconRow__icon">
+              <img
+                src="./images/icons/icons8-wütendes-auge-100.png"
+                alt="LittleIcon_4"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,390 @@
+/* --------------------------------------------------------------     FONTS ------- */
+h2,
+p,
+.landing_p {
+  color: #d6af2e;
+}
+
+h4,
+h3 {
+  color: rgb(214, 214, 214);
+  font-family: "manrope", sans-serif;
+}
+
+.info_p_white,
+.info_p_black,
+.p_black_large,
+.p_black {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1rem;
+}
+
+.p_white {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1.2rem;
+}
+
+.info_p_black,
+.p_black_large,
+.p_black {
+  color: black;
+}
+
+.info_p_white,
+.p_white {
+  color: rgb(214, 214, 214);
+}
+
+.p_black_large {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: Roboto Condensed, Trebuchet MS, sans-serif;
+  font-weight: lighter;
+}
+/* -------------------------------------------------------------- DEFINE COLORS ------- */
+
+.footer__textArea__textBtn__btn2 img,
+.footer__textArea__textBtn__btn1 img,
+.mC__btnRow--forth-BTN img,
+.mC__btnRow--back-BTN img,
+.icon,
+.landing__text__bigIcon img,
+.mC__iconRow__icon img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(1401%)
+    hue-rotate(334deg) brightness(106%) contrast(103%);
+}
+
+.footer__bottomBar__iconRow__icon img {
+  filter: invert(100%);
+}
+
+/* ----------------------------------------------------------------  NAVBAR ------- */
+nav li {
+  border: 1px solid #facc37da;
+  border-radius: 0.2rem;
+  background-color: rgba(225, 225, 225, 0.498);
+  padding: 0.3rem 0.1rem 0.6rem 0.1rem;
+  margin: 0 0.3rem;
+}
+
+.linksNavbar {
+  text-decoration: none;
+  font-family: Roboto Condensed, Trebuchet MS, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------GRID ROW 1 - LANDING ------- */
+
+.landing__image {
+  background-image: url("./images/landingpageS.png");
+  background-size: cover;
+  background-position: 70% 0;
+}
+
+.landing__text {
+  background-image: url("./images/black-smooth-textured-paper-background.jpg");
+}
+.landing__shadow {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.landing__text__bigIcon {
+  padding-top: 2rem;
+}
+
+.landing__text__bigIcon img {
+  width: auto;
+  height: 10vw;
+  object-fit: contain;
+}
+.landing__text__linkList {
+  margin-top: 4rem;
+  background-color: transparent;
+}
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  background-image: url("./images/icons/icons8-dreieck2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.landing_p {
+  font-family: Roboto Condensed, Trebuchet MS, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dot {
+  background-color: rgb(0, 0, 0);
+  width: 13px;
+  height: 13px;
+}
+
+/* ---------------------------------------------------- GRID ROW 2 - MAJOR CONTENT CONTAINER ------- */
+.majorContainer::before {
+  background-image: url("./images/black-smooth-textured-paper-background.jpg");
+}
+
+/* ----------------------------------------------------------  MAJOR C -> ICON ROW CONTAINER ------- */
+.mC__iconRow__icon {
+  border: none;
+  background-color: transparent;
+  padding: 1rem 2rem;
+}
+.mC__iconRow__icon img {
+  width: auto;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+/* -----------------------------------------------------------  MAJOR C -> BOX ROW CONTAINER ------- */
+.majorContainer__boxRow {
+  background-color: #00000080;
+  border: solid goldenrod;
+  border-width: 1px 0;
+}
+
+/* -------------------------------------------------  MAJOR C -> BOX ROW CONTAINER ------------------ */
+.mC__boxRow__heading {
+  background-color: transparent;
+  height: 3rem;
+  width: auto;
+
+  font-size: 1.7rem;
+  margin: 1.5rem 0 3rem 0;
+}
+
+/* --------------------------------------------------------  MAJOR C -> BUTTON ROW CONTAINER ------- */
+.mC__btnRow--action2-BTN,
+.mC__btnRow--action1-BTN {
+  background-color: rgb(58, 50, 50);
+  border: solid 1px #facc37da;
+}
+
+
+
+/* -----------------------------------------------------  MAJOR C -> INFO BAR CONTAINER ------- */
+
+.mC__infoBar__icon-txt {
+  background-image: url("./images/infobarS.png");
+  padding-left: 1rem;
+  opacity: 0.9;
+  object-fit: contain;
+  background-position: center center;
+}
+
+.mC__infoBar__infoText-backForthBtn {
+  background-color: rgb(227, 227, 227);
+}
+
+.mC__btnRow--forth-BTNw,
+.mC__btnRow--back-BTNw,
+.mC__btnRow--forth-BTN,
+.mC__btnRow--back-BTN {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.3rem;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.mC__btnRow--forth-BTNw,
+.mC__btnRow--back-BTNw {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0.3rem;
+  border: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.mC__btnRow--forth-BTNw img,
+.mC__btnRow--back-BTNw img,
+.mC__btnRow--forth-BTN img,
+.mC__btnRow--back-BTN img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* ----------------------------------------------  MAJOR C -> BOX ROW CONTAINER --> RIGHT BOX ------ */
+.dateBox__date {
+  background-image: url("./images/architektur/wall3s.jpg");
+  opacity: 0.6;
+  object-fit: contain;
+  background-position: center center;
+}
+
+/* -----------------------------------------------------  MAJOR C -> IMAGE ROW CONTAINER ------- */
+.imageBox--text {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.7;
+  object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.mC__imageRow__infoBox {
+  border-width: 2px 2px 0 0;
+  border-style: solid;
+  border-color: #facc37;
+}
+
+/* ---------------------------------------------------    GRID ROW 3  FOOTER CONTAINER ------- */
+.footer {
+  background-image: url("./images/footer2S.png");
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.footer__textArea {
+  padding: 1.5rem;
+  background-image: url(./images/black-smooth-textured-paper-background.jpg);
+}
+
+.footer__textArea__textBtn {
+  background-color: transparent;
+}
+
+.footer__textArea__textBtn__text2,
+.footer__textArea__textBtn__text1 {
+  background-color: transparent;
+  margin: 0 1.5rem 0 0;
+  flex-grow: 1;
+}
+
+.footer__textArea__textBtn__btn2,
+.footer__textArea__textBtn__btn1 {
+  border: none;
+  background-color: transparent;
+  margin: 0 0 1rem 0;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+.footer__textArea__textBtn__btn2 img,
+.footer__textArea__textBtn__btn1 img {
+  height: 2rem;
+}
+
+.footer__bottomBar {
+  padding: 1.5rem;
+  background-image: url(./images/black-smooth-textured-paper-background.jpg);
+}
+
+.footer__bottomBar__iconRow__icon {
+  background-color: transparent;
+  padding-left: 3rem;
+  position: relative;
+}
+.footer__bottomBar__iconRow__icon img {
+  position: absolute;
+
+  height: 2rem;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* --------------------------------------------    MEDIA QUERY TABLET MAX-WIDHT 1023  ------- */
+@media screen and (max-width: 1023px) {
+  .p_white,
+  .p_black {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .mC__btnRow--action1-BTN,
+.mC__btnRow--action2-BTN,
+.mC__btnRow--action3-BTN {
+  padding: 0 1rem;
+}
+
+  
+  .footer__bottomBar__impressum {
+    background-color: transparent;
+  }
+
+  .footer__bottomBar__iconRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .footer__bottomBar__iconRow__icon {
+    border: none;
+    background-color: transparent;     
+    position: relative;
+    padding: 1rem 2rem;
+    }
+
+  .footer__bottomBar__iconRow__icon img {
+    position: absolute;
+
+    height: 2rem;
+    object-fit: contain;
+    z-index: 1;
+  }
+  
+}
+  /* --------------------------------------------    MEDIA QUERY MOBILE MAX-WIDHT 768  ------- */
+  @media screen and (max-width: 768px) {
+    .p_white,
+    .p_black {
+      font-size: 1.3rem;
+    }
+
+    .info_p_black {
+      font-size: 0.9rem;
+    }
+    
+    .p_black_large {
+      font-size: 1.5rem;
+    }
+
+    .landing__shadow {
+      width: 45%;
+      height: 100%;
+
+      z-index: 1;
+    }
+
+    .landing__text {
+      margin-left: -1.5rem;
+    }
+
+    .landing__text__linkList {
+      margin-top: 1.5rem;
+    }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-bottom: 8px;
+      margin-right: 10px;
+    }
+    .landing_p {
+      font-size: 0.9rem;
+    }
+  }
+}
