@@ -172,8 +172,6 @@ nav li {
   border: solid 1px #facc37da;
 }
 
-
-
 /* -----------------------------------------------------  MAJOR C -> INFO BAR CONTAINER ------- */
 
 .mC__infoBar__icon-txt {
@@ -307,17 +305,20 @@ nav li {
     font-size: 1.2rem;
   }
 
+  .p_black_large {
+    font-size: 2rem;
+  }
+
   h4 {
     font-size: 1.5rem;
   }
 
   .mC__btnRow--action1-BTN,
-.mC__btnRow--action2-BTN,
-.mC__btnRow--action3-BTN {
-  padding: 0 1rem;
-}
+  .mC__btnRow--action2-BTN,
+  .mC__btnRow--action3-BTN {
+    padding: 0 1rem;
+  }
 
-  
   .footer__bottomBar__impressum {
     background-color: transparent;
   }
@@ -333,10 +334,10 @@ nav li {
 
   .footer__bottomBar__iconRow__icon {
     border: none;
-    background-color: transparent;     
+    background-color: transparent;
     position: relative;
     padding: 1rem 2rem;
-    }
+  }
 
   .footer__bottomBar__iconRow__icon img {
     position: absolute;
@@ -345,46 +346,44 @@ nav li {
     object-fit: contain;
     z-index: 1;
   }
-  
 }
-  /* --------------------------------------------    MEDIA QUERY MOBILE MAX-WIDHT 768  ------- */
-  @media screen and (max-width: 768px) {
-    .p_white,
-    .p_black {
-      font-size: 1.3rem;
-    }
+/* --------------------------------------------    MEDIA QUERY MOBILE MAX-WIDHT 768  ------- */
+@media screen and (max-width: 768px) {
+  .p_white,
+  .p_black {
+    font-size: 1.3rem;
+  }
 
-    .info_p_black {
-      font-size: 0.9rem;
-    }
-    
-    .p_black_large {
-      font-size: 1.5rem;
-    }
+  .info_p_black {
+    font-size: 0.9rem;
+  }
 
-    .landing__shadow {
-      width: 45%;
-      height: 100%;
+  .p_black_large {
+    font-size: 1.5rem;
+  }
 
-      z-index: 1;
-    }
+  .landing__shadow {
+    width: 45%;
+    height: 100%;
 
-    .landing__text {
-      margin-left: -1.5rem;
-    }
+    z-index: 1;
+  }
 
-    .landing__text__linkList {
-      margin-top: 1.5rem;
-    }
+  .landing__text {
+    margin-left: -1.5rem;
+  }
 
-    .icon {
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-bottom: 8px;
-      margin-right: 10px;
-    }
-    .landing_p {
-      font-size: 0.9rem;
-    }
+  .landing__text__linkList {
+    margin-top: 1.5rem;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 8px;
+    margin-right: 10px;
+  }
+  .landing_p {
+    font-size: 0.9rem;
   }
 }
