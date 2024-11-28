@@ -1,0 +1,311 @@
+/*------------------------------------------------------- GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar__list > *,
+.navBar__search-field > *,
+a,
+h1,
+h2,
+p {
+  font-family: 'Oxygen, Roboto_Mono', sans-serif;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+navigation-bar,
+.hero__title,
+.hero__text,
+.navBar__list,
+.navBar__search-field > * {
+  background: transparent;
+}
+
+/*------------------------------------------------------- HEADER */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100vw - 8.5rem);
+  z-index: 100;
+  background: transparent;
+  margin: 0rem 5rem;
+  top: 4rem;
+  position: sticky;
+}
+
+/*------------------------------------------------------- NAVBAR */
+.navBar__search-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.navBar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 0.5rem 1rem;
+}
+
+.navBar__list > li {
+  list-style-type: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/*------------------------------------------------------- MAIN WRAPPER */
+.main__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: -3.5rem;
+
+  background-color: #cc3d10;
+  /* border: solid 0.5rem black; */
+}
+
+/*------------------------------------------------------- MAIN CONTENT */
+.main__content {
+  width: calc(100% - 8rem);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+
+  /* gap: 0.2rem; */
+  margin: 4rem;
+  /* background-color: darkorange; */
+}
+
+/*------------------------------------------------------- MAIN HERO */
+.main__hero {
+  grid-column: span 10;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  max-height: calc(100vh - 8rem);
+
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__hero img {
+  object-fit: cover;
+  object-position: 50% 15%;
+
+  width: 100%;
+  height: 100%;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 3;
+}
+
+.hero__title,
+.hero__text {
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+
+/* ------------------------------------------------------- MAIN INFO BOX */
+
+.main__aboutText-Box,
+.main__aboutInfo-Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: black;
+  margin-top: 4rem;
+  padding: 2rem;
+  /* min-height: 25rem; */
+}
+
+.main__aboutInfo-Box {
+  grid-column: 1 / span 5;
+  margin-left: auto;
+  width: 100%;
+}
+.main__aboutInfo-Box--info {
+  margin-left: 50%;
+  margin-right: 35%;
+}
+
+.main__aboutText-Box {
+  grid-column: 6 / span 5;
+}
+.main__aboutText-Box--text-btn {
+  margin: 1rem 10rem 1rem 0;
+}
+
+/* ------------------------------------------------------- MAIN IMAGE ICON BOXES */
+.main__imageIcon-Box-1,
+.main__imageIcon-Box-2,
+.main__imageIcon-Box-3 {
+  background-color: black;
+  margin-top: 4rem;
+}
+
+.main__imageIcon-Box-1 {
+  grid-column: 3 / span 2;
+}
+.main__imageIcon-Box-2 {
+  grid-column: 5 / span 2;
+}
+.main__imageIcon-Box-3 {
+  grid-column: 7 / span 2;
+}
+
+.imageIcon__Box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.imageIcon__Box2 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.imageIcon__Box1 img,
+.imageIcon__Box2 img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.imageIcon__Box--icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.imageIcon__Box--icon img {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------------- MAIN IMAGE BOXES */
+.main__imageBox-1,
+.main__imageBox-2,
+.main__imageBox-3,
+.main__imageBox-4,
+.main__quoteBox-5 {
+  display: flex;
+  margin-top: 4rem;
+  background-color: black;
+  padding: 2rem;
+}
+
+/* ------------------------------------------------------- MAIN IMAGE BOX 1 */
+.main__imageBox-1 {
+  grid-column: span 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageBox-1__text {
+  width: 25%;
+  margin: 2rem 0;
+}
+
+.imageBox-1__text h2 {
+  text-align: right;
+}
+
+.imageBox-1__text h2:first-of-type {
+  margin-right: 3rem;
+}
+
+.imageBox-1__text h2:last-of-type {
+  margin-right: 1rem;
+}
+
+.whiteBar {
+  display: block;
+  width: 50%;
+  height: 0.5rem;
+  background-color: white;
+  margin: 0.5rem 0;
+}
+
+/* ------------------------------------------------------- MAIN IMAGE BOX 2 */
+.main__imageBox-2 {
+  grid-column: 1 / span 6;
+}
+
+/* ------------------------------------------------------- MAIN IMAGE BOX 3 */
+.main__imageBox-3 {
+  grid-column: 7 / span 4;
+}
+
+/* ------------------------------------------------------- MAIN IMAGE BOX 4 */
+.main__imageBox-4 {
+  grid-column: 1 / span 4;
+}
+/* ------------------------------------------------------- MAIN QUOTE BOX 5 */
+.main__quoteBox-5 {
+  grid-column: 5 / span 6;
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.quote__text {
+  position: relative;
+  width: 25%;
+  margin: 2rem 0;
+}
+
+.quote__text p {
+  font-style: italic;
+}
+
+.quote-marks {
+  font-size: 8rem;
+  line-height: 1;
+  color: white;
+}
+
+.quote-marks-left {
+  position: absolute;
+  top: -4rem; /* Passen Sie den Wert an, um die vertikale Position zu justieren */
+  left: -1rem; /* Passen Sie den Wert an, um die horizontale Position zu justieren */
+}
+
+.quote-marks-right {
+  position: absolute;
+  bottom: -6.5rem; /* Passen Sie den Wert an, um die vertikale Position zu justieren */
+  right: -1rem; /* Passen Sie den Wert an, um die horizontale Position zu justieren */
+}
