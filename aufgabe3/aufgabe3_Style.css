@@ -89,7 +89,7 @@ navigation-bar,
 /*------------------------------------------------------- MAIN HERO */
 .main__hero {
   grid-column: span 10;
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,7 +217,7 @@ navigation-bar,
 }
 
 /* ------------------------------------------------------- MAIN IMAGE BOXES */
-.main__imageBox-1,
+/* .main__imageBox-1, */
 .main__imageBox-2,
 .main__imageBox-3,
 .main__imageBox-4,
@@ -225,31 +225,74 @@ navigation-bar,
   display: flex;
   margin-top: 4rem;
   background-color: black;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 /* ------------------------------------------------------- MAIN IMAGE BOX 1 */
 .main__imageBox-1 {
   grid-column: span 10;
+  display: flex;
+  margin-top: 4rem;
+  background-color: black;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.main__imageBox-1 img {
+  object-fit: cover;
+  /* object-position: 50% 15%; */
+
+  width: 100%;
+  height: 100%;
+}
+
+.imageBox-1__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.35) 9%,
+    rgba(0, 0, 0, 0.55) 18%,
+    rgba(0, 0, 0, 0.75) 27%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(0, 0, 0, 0.75) 73%,
+    rgba(0, 0, 0, 0.65) 82%,
+    rgba(0, 0, 0, 0.35) 91%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 3;
 }
 
 .imageBox-1__text {
   width: 25%;
   margin: 2rem 0;
+  z-index: 10;
 }
 
 .imageBox-1__text h2 {
   text-align: right;
+  z-index: 10;
 }
 
 .imageBox-1__text h2:first-of-type {
   margin-right: 3rem;
+  z-index: 10;
 }
 
 .imageBox-1__text h2:last-of-type {
   margin-right: 1rem;
+  z-index: 10;
 }
 
 .whiteBar {
@@ -258,16 +301,63 @@ navigation-bar,
   height: 0.5rem;
   background-color: white;
   margin: 0.5rem 0;
+  z-index: 10;
 }
 
 /* ------------------------------------------------------- MAIN IMAGE BOX 2 */
 .main__imageBox-2 {
   grid-column: 1 / span 6;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  max-height: 30rem;
+}
+
+.main__imageBox-2 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 60% 0;
+}
+
+.imageBox-2__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background: radial-gradient(
+    circle farthest-corner at bottom right,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.92) 9%,
+    rgba(0, 0, 0, 0.88) 18%,
+    rgba(0, 0, 0, 0.75) 28%,
+    rgba(0, 0, 0, 0.55) 38%,
+    rgba(0, 0, 0, 0.25) 45%,
+    rgba(0, 0, 0, 0.15) 63%,
+    rgba(0, 0, 0, 0.1) 81%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  z-index: 3;
+}
+
+.imageBox-2__text {
+  position: absolute;
+  width: 25%;
+  margin: 1rem 1rem;
 }
 
 /* ------------------------------------------------------- MAIN IMAGE BOX 3 */
 .main__imageBox-3 {
   grid-column: 7 / span 4;
+  border-bottom: 0.1rem solid white;
+  border-left: 0.1rem solid white;
 }
 
 /* ------------------------------------------------------- MAIN IMAGE BOX 4 */
@@ -300,12 +390,12 @@ navigation-bar,
 
 .quote-marks-left {
   position: absolute;
-  top: -4rem; /* Passen Sie den Wert an, um die vertikale Position zu justieren */
-  left: -1rem; /* Passen Sie den Wert an, um die horizontale Position zu justieren */
+  top: -4rem; /*  Wert , um die vertikale Position zu justieren */
+  left: -1rem; /*  Wert , um die horizontale Position zu justieren */
 }
 
 .quote-marks-right {
   position: absolute;
-  bottom: -6.5rem; /* Passen Sie den Wert an, um die vertikale Position zu justieren */
-  right: -1rem; /* Passen Sie den Wert an, um die horizontale Position zu justieren */
+  bottom: -6.5rem; /* Wert, um die vertikale Position zu justieren */
+  right: -1rem; /* Wert, um die horizontale Position zu justieren */
 }
