@@ -5,5 +5,5 @@
   "singleQuote": true,
   "printWidth": 150,
   "htmlWhitespaceSensitivity": "strict",
-  "singleAttributePerLine": true
+  "singleAttributePerLine": false
 }

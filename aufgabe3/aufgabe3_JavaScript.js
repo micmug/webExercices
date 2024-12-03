@@ -5,18 +5,43 @@ window.addEventListener('scroll', function () {
   background.style.backgroundPositionY = -scrollPosition * 0.5 + 'px'
 })
 
-// window.addEventListener('scroll', function() {
-//   var scrollPosition = window.scrollY;
-//   var background = document.querySelector('.body')
-//   var foreground = document.querySelector('.foreground');
-//   var main__wrapper = document.querySelector('.main__wrapper');
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.querySelector('.imageBox-4__overlay')
 
-//   // Bewegt den Hintergrund (body) langsamer
-//   document.body.style.backgroundPositionY = -(scrollPosition * 0.3) + 'px';
+  const tiltEffect = (e) => {
+    const rect = overlay.getBoundingClientRect()
+    const x = e.clientX - rect.left // Mausposition relativ zur linken Kante des Overlays
+    const y = e.clientY - rect.top // Mausposition relativ zur oberen Kante des Overlays
 
-//   // Bewegt den Hauptinhalt normal
-//   main__wrapper.style.transform = 'translateY(' + (-scrollPosition) + 'px)';
+    const width = rect.width
+    const height = rect.height
 
-//   // Bewegt den Foreground schneller
-//   foreground.style.transform = 'translateY(' + (-scrollPosition * 1.2) + 'px)';
-// });
+    // Berechnung der Neigung
+    const intensity = 2 // Faktor für stärkeren Effekt
+    let rotateX = (y / height - 0.5) * -30 * intensity // Invertierte Y-Achse
+    let rotateY = (x / width - 0.5) * 30 * intensity
+
+    // Begrenzung auf maximal ±30 Grad
+    rotateX = Math.max(-30, Math.min(30, rotateX))
+    rotateY = Math.max(-30, Math.min(30, rotateY))
+
+    // Transformation anwenden
+    overlay.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+  }
+
+  const resetTilt = () => {
+    // Overlay in die Ausgangslage zurücksetzen
+    overlay.style.transform = 'rotateX(0deg) rotateY(0deg)'
+  }
+
+  // Effekt, wenn die Maus außerhalb des Overlays bewegt wird
+  document.addEventListener('mousemove', (e) => {
+    if (!overlay.matches(':hover')) {
+      // Überprüft, ob die Maus außerhalb des Overlays ist
+      tiltEffect(e)
+    }
+  })
+
+  // Zurücksetzen, wenn die Maus das Overlay betritt
+  overlay.addEventListener('mouseenter', resetTilt)
+})
