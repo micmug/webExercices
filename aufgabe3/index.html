@@ -2,38 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="aufgabe3_Style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="aufgabe3_Style.css"
+    />
 
     <script src="/aufgabe3_JavaScript.js"></script>
     <title>aufgabe_3</title>
   </head>
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <!-- SEARCH FIELD -->
-      <form class="navBar__search-field" action="suchergebnisse.html" method="GET">
-        <input type="search" id="search" name="q" placeholder="looking for ..." required />
-        <button type="submit">Go!</button>
-      </form>
-      <!-- NAVIGATIONS LEISTE -->
-      <nav class="navigation-bar">
-        <ul class="navBar__list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- MAIN WRAPPER -->
-    <wrapper class="main__wrapper">
-      <div class="parallax-container">
-        <div class="parallax-background"></div>
+  <!-- BODY -->
+  <body class="body">
+    <div class="foreground">
+      <img src="./images/rechts.png" alt:"rechts" class ="foreground__right"> <img src="./images/rechts_bluete.png" alt:"rechts" class
+      ="foreground__right-flower"> <img src="./images/links.png" alt:"links" class ="foreground__left"> <img src="./images/links_blaetter.png"
+      alt:"links" class ="foreground__left-leaves"> <img src="./images/links_klein.png" alt:"links" class ="foreground__left-small">
+
+      <!-- HEADER -->
+      <header class="header">
+        <!-- SEARCH FIELD -->
+        <form
+          class="navBar__search-field"
+          action="suchergebnisse.html"
+          method="GET"
+        >
+          <input
+            type="search"
+            id="search"
+            name="q"
+            placeholder="looking for ..."
+            required
+          />
+          <button type="submit">Go!</button>
+        </form>
+        <!-- NAVIGATIONS LEISTE -->
+        <nav class="navigation-bar">
+          <ul class="navBar__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- <div class="content"> -->
+      <!-- MAIN WRAPPER -->
+      <wrapper class="main__wrapper">
         <!-- MAIN CONTENT -->
         <main class="main__content">
           <!-- MAIN HERO  -->
           <section class="main__hero">
-            <img src="./images/hero.jpg" alt="hero" />
+            <img
+              src="./images/hero.jpg"
+              alt="hero"
+            />
             <div class="hero__overlay">
               <h1 class="hero__title">Welcome to my new website</h1>
               <p class="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsam</p>
@@ -60,35 +84,56 @@
           <section class="main__imageIcon-Box-1">
             <div class="imageIcon__Box1">
               <div class="imageIcon__Box--icon">
-                <img src="./icons/erde.png" alt="icon1" />
+                <img
+                  src="./icons/erde.png"
+                  alt="icon1"
+                />
                 <p>Lorem ipsum</p>
               </div>
-              <img src="./images/cat.jpg" alt="image1" />
+              <img
+                src="./images/cat.jpg"
+                alt="image1"
+              />
             </div>
           </section>
           <!-- IMAGE ICON BOX 2 -->
           <section class="main__imageIcon-Box-2">
             <div class="imageIcon__Box2">
               <div class="imageIcon__Box--icon">
-                <img src="./icons/sonne.png" alt="icon1" />
+                <img
+                  src="./icons/sonne.png"
+                  alt="icon1"
+                />
                 <p>Lorem ipsum</p>
               </div>
-              <img src="./images/w1.jpg" alt="image1" />
+              <img
+                src="./images/w1.jpg"
+                alt="image1"
+              />
             </div>
           </section>
           <!-- IMAGE ICON BOX 3 -->
           <section class="main__imageIcon-Box-3">
             <div class="imageIcon__Box1">
               <div class="imageIcon__Box--icon">
-                <img src="./icons/stern.png" alt="icon1" />
+                <img
+                  src="./icons/stern.png"
+                  alt="icon1"
+                />
                 <p>Lorem ipsum</p>
               </div>
-              <img src="./images/raven.jpg" alt="image1" />
+              <img
+                src="./images/raven.jpg"
+                alt="image1"
+              />
             </div>
           </section>
           <!-- IMAGE BOX 1 -->
           <section class="main__imageBox-1">
-            <img src="./images/blau.jpg" alt="image1" />
+            <img
+              src="./images/blau.jpg"
+              alt="image1"
+            />
             <div class="imageBox-1__overlay">
               <div class="imageBox-1__text">
                 <h2>Lorem</h2>
@@ -100,7 +145,10 @@
           </section>
           <!-- IMAGE BOX 2 -->
           <section class="main__imageBox-2">
-            <img src="./images/w4a.png" alt="image2" />
+            <img
+              src="./images/box2.jpg"
+              alt="image2"
+            />
             <div class="imageBox-2__overlay">
               <div class="imageBox-2__text">
                 <h2>Lorem ipsum</h2>
@@ -109,7 +157,10 @@
           </section>
           <!-- IMAGE BOX 3 -->
           <section class="main__imageBox-3">
-            <img src="./images/teich.jpg" alt="image3" />
+            <img
+              src="./images/teich.jpg"
+              alt="image3"
+            />
             <div class="imageBox-3__overlay">
               <div class="imageBox-3__text">
                 <p>something</p>
@@ -118,7 +169,10 @@
           </section>
           <!-- IMAGE BOX 4 -->
           <section class="main__imageBox-4">
-            <img src="./images/tunnel.jpg" alt="image4" />
+            <img
+              src="./images/tunnel.jpg"
+              alt="image4"
+            />
             <div class="imageBox-4__overlay"></div>
           </section>
           <!-- IMAGE BOX 5 -->
@@ -133,7 +187,10 @@
           </section>
           <!-- FOOTER -->
           <footer class="footer">
-            <img src="./images/gruen.jpg" alt="image4" />
+            <img
+              src="./images/gruen.jpg"
+              alt="image4"
+            />
 
             <div class="footer__overlay">
               <div class="footer__text">
@@ -144,14 +201,23 @@
                 </p>
               </div>
               <form class="footer__form">
-                <input type="name" placeholder="... your name" required />
-                <input type="email" placeholder="... your email@address" required />
+                <input
+                  type="name"
+                  placeholder="... your name"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="... your email@address"
+                  required
+                />
                 <button type="submit">SUBMIT</button>
               </form>
             </div>
           </footer>
         </main>
-      </div>
-    </wrapper>
+      </wrapper>
+      <!-- </div> -->
+    </div>
   </body>
 </html>

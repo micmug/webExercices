@@ -3,7 +3,7 @@
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
-  "htmlWhitespaceSensitivity": "ignore",
-  "printWidth": 150
-  
+  "printWidth": 150,
+  "htmlWhitespaceSensitivity": "strict",
+  "singleAttributePerLine": true
 }

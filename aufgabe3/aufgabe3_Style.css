@@ -18,13 +18,86 @@ p {
   margin-bottom: 0.5rem;
 }
 
-navigation-bar,
+.navigation-bar,
 .hero__title,
 .hero__text,
 .navBar__list,
 .navBar__search-field > *,
 .footer__form > * {
   background: transparent;
+}
+
+.body {
+  width: 100%;
+  background-image: url('./images/backgroundbw2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.foreground {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+.foreground > img {
+  filter: grayscale(100%) contrast(100%) brightness(20%);
+}
+
+.foreground__left {
+  position: absolute;
+  left: 0;
+  bottom: -5%;
+  width: 20%;
+  height: auto;
+  z-index: 30;
+}
+.foreground__left-leaves {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 30%;
+  height: auto;
+  z-index: 30;
+}
+
+.foreground__left-small {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 30%;
+  height: auto;
+  z-index: 30;
+}
+.foreground__right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: auto;
+  z-index: 30;
+}
+
+.foreground__right-flower {
+  position: absolute;
+  right: 0;
+  top: 60%;
+  width: 30%;
+  height: auto;
+  z-index: 30;
+}
+
+.content {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
 }
 
 /*------------------------------------------------------- HEADER */
@@ -72,44 +145,9 @@ navigation-bar,
   align-items: flex-start;
   flex-direction: column;
   margin-top: -3.5rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/background.jpg');
-  background-color: rgb(0, 0, 0);
-  background-blend-mode: luminosity;
-  background-size: cover;
+
   overflow: hidden;
   perspective: 1px;
-}
-
-.parallax-container > *:not(.parallax-background) {
-  position: relative;
-  z-index: 1;
-}
-
-.parallax-container {
-  width: 100%;
-  height: 100vh;
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform-style: preserve-3d;
-}
-
-.parallax-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateZ(-1px) scale(2);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/background.jpg');
-
-  background-size: cover;
-  z-index: -1;
 }
 
 /*------------------------------------------------------- MAIN CONTENT */
@@ -157,7 +195,7 @@ navigation-bar,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.1) 100%);
   z-index: 3;
 }
 
@@ -357,7 +395,7 @@ navigation-bar,
   object-fit: cover;
   width: 100%;
   height: 100%;
-  object-position: 60% 0;
+  object-position: 60% 10%;
 }
 
 .imageBox-2__overlay {
@@ -397,8 +435,8 @@ navigation-bar,
   grid-column: 7 / span 4;
   grid-row: span 5;
   position: relative;
-  border-bottom: 0.1rem solid white;
-  border-left: 0.1rem solid white;
+  border-bottom: 0.1rem solid rgb(255, 2, 2);
+  border-left: 0.1rem solid rgb(255, 2, 2);
   /* max-height: 30rem; */
   z-index: 2;
 }
